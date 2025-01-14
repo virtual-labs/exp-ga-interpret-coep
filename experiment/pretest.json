@@ -2,38 +2,129 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "What is the primary purpose of a GA diagram in a process plant? ",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+         "a": "To show the detailed piping layout ",
+        "b": "To illustrate the process flow diagram ",
+        "c": "To provide a general overview of the plant layout ",
+        "d": "To specify the instrumentation and control systems"
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
-      "correctAnswer": "a",
+      
+      "correctAnswer": "c",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "Which of the following is NOT typically included in a GA diagram? ",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Equipment layout ",
+        "b": "Piping layout ",
+        "c": "Instrumentation details ",
+        "d": "Building architecture"
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
+     
       "correctAnswer": "c",
       "difficulty": "beginner"
+    },
+    {
+      "question": "What is the benefit of using a GA diagram in process plant design? ",
+      "answers": {
+        "a": "It reduces the cost of plant construction ",
+        "b": "It improves plant safety ",
+        "c": "It enhances communication among stakeholders",
+        "d": "It increases plant efficiency"
+      },
+     
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+	{
+      "question": "Who is typically responsible for developing a GA diagram? ",
+      "answers": {
+        "a": "Process engineer ",
+        "b": "Mechanical engineer",
+        "c": "Architect ",
+        "d": "Plant operator"
+      },
+     
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+	
+	{
+      "question": "What is the relationship between a GA diagram and a PFD (Process Flow Diagram)? ",
+      "answers": {
+        "a": "A GA diagram is a detailed version of a PFD ",
+        "b": "A PFD is a simplified version of a GA diagram ",
+        "c": "A GA diagram shows the plant layout, while a PFD shows the process flow ",
+        "d": "A GA diagram and PFD are unrelated"
+      },
+     
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+	
+	{
+      "question": "Which of the following is a key consideration when developing a GA diagram? ",
+      "answers": {
+         "a": "Cost estimation ",
+        "b": "Plant operation and maintenance ",
+        "c": "Space optimization ",
+        "d": "Environmental impact"
+      },
+      
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What is the typical scale of a GA diagram? ",
+      "answers": {
+        "a": "1:1",
+        "b": "1:10 ",
+        "c": "1:50 ",
+        "d": "1:100"
+      },
+     
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Which software is commonly used to develop a GA diagram? ",
+      "answers": {
+        "a": "AutoCAD ",
+        "b": "SolidWorks ",
+        "c": "Revit ",
+        "d": "MS Visio"
+      },
+     
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+	{
+      "question": "What is the benefit of using a GA diagram during plant operation and maintenance? ",
+      "answers": {
+        "a": "It improves plant efficiency ",
+        "b": "It reduces plant downtime ",
+        "c": "It enhances operator training ",
+        "d": "It facilitates plant modifications"
+      },
+     
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+	
+	{
+      "question": "How often should a GA diagram be updated? ",
+      "answers": {
+        "a": "Daily ",
+        "b": "Weekly ",
+        "c": "Monthly ",
+        "d": "As needed"
+      },
+     
+      "correctAnswer": "d",
+      "difficulty": "beginner"
     }
+  
+  
   ]
 }
