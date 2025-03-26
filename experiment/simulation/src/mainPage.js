@@ -40,7 +40,7 @@ function GAMimic() {
 	<div class="row">
 	<div class="col-sm-6" id="imgContainer">
 	
-	  <img id="targetImage" src="images/MimicGA.PNG" alt="Sample Image">
+	  <img id="targetImage" src="images/MimicGA.png" alt="Sample Image">
 	</div>
 	<div class="col-sm-6">
 	
