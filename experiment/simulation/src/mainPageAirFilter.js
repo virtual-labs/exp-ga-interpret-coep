@@ -1,16 +1,17 @@
- var timerMasterJson={};
- var conCnt=0;
- var calCnt=0;
- var resultJson={};
-let masterJson={};
-let arrayJson=[];
-var selectedValue=0;
-  var image ;
-  var cnt=1;
-  var zPos; // Z is constant as we are in a 2D plane
-function GAMimic() {
+
+function GAMimic1() {
+	 var timerMasterJson={};
+	 var conCnt=0;
+	 var calCnt=0;
+	 var resultJson={};
+	let masterJson={};
+	let arrayJson=[];
+	var selectedValue=0;
+	  var image ;
+	  var cnt=1;
+	  var zPos; // Z is constant as we are in a 2D plane
 	$("#counter").prop("hidden",false);
-	$("#Header").html("<center>ELECTRICAL WRING WITH JUNCTION BOX </center>");
+	$("#Header").html("<center>NUMANTIC TUBING WITH AIR HEADER</center>");
 	var htm=`
 	<div class="row" style="margin-bottom:5px;">
 	<div class="col-sm-2">
@@ -125,24 +126,18 @@ function GAMimic() {
 	
 	</div>
 	</div>
-	<div class="row" style="margin-top:10px">
+<!--	<div class="row" style="margin-top:10px">
 	<div class="col-sm-10" id="">
 	
 	</div>
-	<div class="col-sm-2" >
-	
-	<button type="button" class="btn btn-danger" id="next" >NEXT</button>
+	<div class="col-sm-2" id="result">
+	<button type="button" class="btn btn-danger" id="result" >Result</button>
 	</div>
-	</div>
+	</div>-->
 	</div>
 	
 	`;
 	$("#mainDiv").html(htm);
-	$("#next").click(function(evt) {
-		
-		GAMimic1();
-	});
-	
 	$('#result').click(function(){
 		resultJson.calCnt=calCnt;
 		resultJson.conCnt=conCnt;
@@ -228,7 +223,6 @@ function GAMimic() {
 		 	        		$("#cntConnection").html(++cnt);
 		 	        		$("#userLength").val("");
 		 	        		 $(".red-circle, .gray-rectangle").css("pointer-events", "auto");
-		 	        		
 	        			 addJsonCreateTable(correctLength);
 						id=0;
 					
@@ -242,7 +236,7 @@ function GAMimic() {
 							$("#ModalBody").html(`Calculate the total length of the cable required for this project.`);
 							$("#coordinateDiv").html(`<center><div class="alert alert-success">
 									  Total Cable Length = <strong>${totalCorrectLength}mm</strong> <br>
-									  The additional cable, beyond the measured one, is required for connection to the junction box = <strong>${totalMeter}Meter</strong> <br>
+									  The additional cable, beyond the measured one, is required for connection to the air header = <strong>${totalMeter}Meter</strong> <br>
 									</div></center>`);
 						}
 						
@@ -327,31 +321,33 @@ function GAMimic() {
 	          <div class="container mt-4">
     
    <div class="alert alert-warning">
-  <strong>Connect the field instrument (red circle) with junction box click source and destination.</strong> 
+  <strong>Connect the field instrument (red circle) with air header click source and destination.</strong> 
 </div>
     <div class="image-container">
-        <img src="images/gamimicimg.jpeg" alt="Example Image" id="ActualName">
+        <img src="images/airfilter.jpg" alt="Example Image" id="ActualName">
         
         <!-- 8 Red Circle Points -->
-        <div class="red-circle" data-type="red" id="r1" style="left: 14%; top: 8%;"> </div>
-        <div class="red-circle" data-type="red" id="r2" style="left: 27%; top: 9%;"></div>
-        <div class="red-circle" data-type="red" id="r3" style="left: 38%; top: 9%;"></div>
-        <div class="red-circle" data-type="red" id="r4" style="left:14% ; top:32% ;"></div>
-        <div class="red-circle" data-type="red" id="r5" style="left: 26%; top:32% ;"></div>
-        <div class="red-circle" data-type="red" id="r6" style="left:38% ; top:32% ;"></div>
-        <div class="red-circle" data-type="red" id="r7" style="left: 28%; top:50% ;"></div>
-        <div class="red-circle" data-type="red" id="r8" style="left:17%; top: 61%;"></div>
+        <div class="red-circle" data-type="red" id="r1" style="left: 17%; top: 11%;"> </div>
+        <div class="red-circle" data-type="red" id="r2" style="left: 29%; top: 11%;"></div>
+        <div class="red-circle" data-type="red" id="r3" style="left: 40%; top: 11%;"></div>
+        <div class="red-circle" data-type="red" id="r4" style="left:17% ; top:33% ;"></div>
+        <div class="red-circle" data-type="red" id="r5" style="left: 29%; top:34% ;"></div>
+        <div class="red-circle" data-type="red" id="r6" style="left:40% ; top:34% ;"></div>
+        <div class="red-circle" data-type="red" id="r7" style="left: 31%; top:52% ;"></div>
+        <div class="red-circle" data-type="red" id="r8" style="left:20%; top: 60%;"></div>
 
         <!-- 8 Gray Rectangle Points -->
-        <div class="gray-rectangle" data-type="gray" id="g1" style="left: 79%; top: 36%;"></div>
-        <div class="gray-rectangle" data-type="gray" id="g2" style="left: 83%; top: 36%;"></div>
-        <div class="gray-rectangle" data-type="gray" id="g3" style="left: 86%; top: 36%;"></div>
-        <div class="gray-rectangle" data-type="gray" id="g4" style="left: 90%; top: 36%;"></div>
-        
-        <div class="gray-rectangle" data-type="gray" id="g5" style="left: 75%; top: 40%; transform: rotate(90deg);"></div>
-        <div class="gray-rectangle" data-type="gray" id="g6" style="left: 75%; top:43%;transform: rotate(90deg);"></div>
-        <div class="gray-rectangle" data-type="gray" id="g7" style="left: 75%; top: 46%;transform: rotate(90deg);"></div>
-        <div class="gray-rectangle" data-type="gray" id="g8" style="left: 75%; top: 49%;transform: rotate(90deg);"></div>
+        <div class="gray-rectangle addrect" data-type="gray" id="g1" style="left: 91%; top: 39%; transform: rotate(90deg);"></div>
+        <div class="gray-rectangle addrect" data-type="gray" id="g2" style="left: 91%; top: 42%; transform: rotate(90deg);"></div>
+        <div class="gray-rectangle addrect" data-type="gray" id="g3" style="left: 91%; top: 45%; transform: rotate(90deg);"></div>
+        <div class="gray-rectangle addrect" data-type="gray" id="g4" style="left: 91%; top: 47%; transform: rotate(90deg);"></div>
+         <div class="gray-rectangle addrect" data-type="gray" id="g5" style="left: 91%; top: 50%; transform: rotate(90deg);"></div>
+         
+        <div class="gray-rectangle addrect" data-type="gray" id="g6" style="left: 82%; top: 39%; transform: rotate(90deg);"></div>
+        <div class="gray-rectangle addrect" data-type="gray" id="g7" style="left: 82%; top:42%;transform: rotate(90deg);"></div>
+        <div class="gray-rectangle addrect" data-type="gray" id="g8" style="left: 82%; top: 44%;transform: rotate(90deg);"></div>
+        <div class="gray-rectangle addrect" data-type="gray" id="g9" style="left: 82%; top: 47%;transform: rotate(90deg);"></div>
+         <div class="gray-rectangle addrect" data-type="gray" id="g10" style="left: 82%; top: 50%;transform: rotate(90deg);"></div>
     </div>
 </div>
 	          `;
@@ -474,8 +470,7 @@ function GAMimic() {
                             width: "2px",
                             height: "0px"
                         });
-                        $(".red-circle, .gray-rectangle").css("pointer-events", "none");
-                        toastr.error("Prevent click until calculation is complete");
+
                         // Animate vertical line
                         line2.animate({ height: lengthY + "px", top: Math.min(verticalStartY, verticalEndY) + "px" }, 500, function () {
                             $("#submitLength").attr("data-correct-length", parseInt(lengthX + lengthY) * 10);
@@ -497,7 +492,7 @@ function GAMimic() {
                             `;
                             $("#ValueTable").html(htm);
                             $("#CalculateDiv,#ValueTable").prop("hidden", false);
-                            
+                            $("#ActualName").css("pointer-events", "none");
                         });
                     });
 }
@@ -570,7 +565,7 @@ function GAMimic() {
                 	        width: length + "px",
                 	        transform: `rotate(${angle}deg)`
                 	    });
-                	    $(".red-circle, .gray-rectangle").css("pointer-events", "none");
+
                 	    // Midpoint for Label
                 	    let midX = (start.x + end.x) / 2;
                 	    let midY = (start.y + end.y) / 2;
@@ -609,7 +604,7 @@ function GAMimic() {
 
                 	    $("#ValueTable").html(htm);
                 	    $("#CalculateDiv, #ValueTable").prop("hidden", false);
-                	   
+                	    $("#ActualName").css("pointer-events", "none");
              }
                  image = $('#ActualName,.red-circle, .gray-rectangle,.line');
                  image.on('mousemove', function(event) {
