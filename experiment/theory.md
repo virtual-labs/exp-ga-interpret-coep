@@ -1,3 +1,5 @@
+## Theory
+
 General Arrangement Drawings for a process plant helps Instrumentation and Control Engineer identify the locations of Instruments, its elevation, and if required how much space is available for shifting the instruments if required. It also helps for cable tray routing and junction box locations.
 
 General Arrangement (GA) drawings play a vital role in Instrumentation and Automation projects, as they provide a comprehensive visual representation of the plant layout, equipment, and instrumentation. These drawings are essential for effective planning, design, and implementation of instrumentation and automation systems. By providing a clear understanding of the plant's layout and equipment, GA drawings enable engineers and technicians to identify potential issues and optimize the design of instrumentation and automation systems.
@@ -12,9 +14,15 @@ Reading GA (General Arrangement) drawings related to automation components requi
 Here are some steps to follow:
 
 1. Familiarize yourself with the drawing conventions: Understand the scale, units, and orientation of the drawing. * Recognize the symbols and abbreviations used for different automation components, such as sensors, actuators, controllers, and I/O devices.
+
 2. Identify the automation components:  Look for symbols and labels that indicate the presence of automation components, such as: + Sensors: temperature, pressure, flow, level, etc. + Actuators: valves, motors, pumps, etc. + Controllers: PLCs, DCSs, HMIs, etc. + I/O devices: input/output modules, remote I/O, etc.
+
 3. Understand the connections and wiring: Identify the connections between automation components, such as: + Signal wires: analog, digital, or communication cables. + Power supply wires: voltage, current, and power ratings. * Recognize the wiring conventions, such as: + Wire colors and coding. + Cable labels and markings.
+
 4. Identify the automation system architecture: Determine the overall architecture of the automation system, including: + Controller hierarchy: master-slave, peer-to-peer, or distributed control. + Communication protocols: Ethernet, Profibus, Modbus, etc.  Identify the interfaces between different automation components, such as: + HMI-PLC interfaces. + PLC-I/O device interfaces.
+
 5. Analyze the automation system functionality: Understand the functional relationships between automation components, such as: + Sensor-actuator loops. + Control algorithms and logic. * Identify the safety and alarm systems, including: + Emergency shutdown systems. + Alarm and warning systems.
+
 6. Verify the drawing against the automation system design: Compare the GA drawing with the automation system design specifications and documentation.  Verify that the drawing accurately represents the automation system architecture, components, and functionality.
+
 By following these steps, you can effectively read and understand GA drawings related to automation components, ensuring that you can design, implement, and maintain automation systems efficiently and effectively.
