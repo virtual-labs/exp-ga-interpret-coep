@@ -7,6 +7,7 @@ function GAMimic1() {
 	let masterJson={};
 	let arrayJson=[];
 	var selectedValue=0;
+	let userLength=0;
 	  var image ;
 	  var cnt=1;
 	  var cnt1=1;
@@ -147,7 +148,7 @@ function GAMimic1() {
 		  $("#ModalBody").css("color", "brown");
 		  $("#exampleModal").modal("show");
 		   
-		    let userLength = parseInt($("#userLength").val()); // Get input value
+		   userLength = parseInt($("#userLength").val()); // Get input value
 		    let correctLength = parseInt($(this).attr("data-correct-length"), 10); // Fetch updated correct length
 		    console.log("Updated correctLength:", correctLength);
 		    console.log("userLength " + userLength);
@@ -169,11 +170,11 @@ function GAMimic1() {
 				        $("#exampleModal").modal("hide");
 						$("#tableDiv").prop("hidden",false);
 		 	        		$("#ValueTable,#CalculateDiv").prop("hidden",true);
-		 	        		$("#cntConnection").html(++cnt);
+//		 	        		$("#cntConnection").html(++cnt);
 		 	        		$("#userLength").val("");
 		 	        		$(".red-circle, .gray-rectangle").css("pointer-events", "auto");
 		 	        		 toastr.success("Now we can attempt the next connection.");
-	        			 addJsonCreateTable(correctLength);
+	        			 addJsonCreateTable(userLength);
 						id=0;
 						if(cnt==7){
 							$("#exampleModal").modal("hide");
@@ -204,15 +205,48 @@ function GAMimic1() {
 
 
 				} else if (id == 4) {
-					 $("#ModalBody").css("color", "brown");
-					 if(selectedValue==1){
-							$("#ModalBody").html(`<p>Here is the length formula:</p>
-			                <img src="images/lengthCal.png" alt="Length Formula" style="width:100%;">`);	 
-					 }
-					 else if(selectedValue==2){
-							$("#ModalBody").html(`<p>Here is the length formula:</p>
-			                <img src="images/Formula_Length.png" alt="Length Formula" style="width:100%;">`);	
-					 }	
+				
+					if (userLength >= min && userLength <= max) {
+						 $("#ModalBody").css("color", "#0E295E");
+						 $("#ModalBody").html(`Length of the cable is correct, attempt the next connection.`);
+					      
+				        $("#exampleModal").modal("hide");
+						$("#tableDiv").prop("hidden",false);
+		 	        		$("#ValueTable,#CalculateDiv").prop("hidden",true);
+//		 	        		$("#cntConnection").html(++cnt);
+		 	        		$("#userLength").val("");
+		 	        		$(".red-circle, .gray-rectangle").css("pointer-events", "auto");
+		 	        		 toastr.success("Now we can attempt the next connection.");
+	        			 addJsonCreateTable(userLength);
+						id=0;
+						if(cnt==7){
+							$("#exampleModal").modal("hide");
+							let totalMeterTemp=parseFloat(totalCorrectLength/1000);
+							let totalMeter = Math.ceil(totalMeterTemp);
+							console.log(totalMeter); 
+							$("#ModalBody").css("color", "brown");
+							$("#ModalBody").html(`Calculate the total length of the cable required for this project.`);
+							$("#selectDiv").prop("hidden",true);
+							$("#coordinateDiv").html(`<center><div class="alert alert-success">
+									  Total Cable Length(mm) = <strong>${totalCorrectLength}mm</strong> <br>
+									   The additional cable, beyond the measured one, is required for connection to the junction box. = <strong>${totalMeter} meter</strong> <br>
+									</div></center>`);
+							
+						}	
+					}
+					else{
+						 $("#ModalBody").css("color", "brown");
+						 if(selectedValue==1){
+								$("#ModalBody").html(`<p>Here is the length formula:</p>
+				                <img src="images/lengthCal.png" alt="Length Formula" style="width:100%;">`);	 
+						 }
+						 else if(selectedValue==2){
+								$("#ModalBody").html(`<p>Here is the length formula:</p>
+				                <img src="images/Formula_Length.png" alt="Length Formula" style="width:100%;">`);	
+						 }	
+					
+				}
+					
 					
 				} else {
 					userLength = $("#userLength").val();
@@ -224,12 +258,12 @@ function GAMimic1() {
 				        $("#exampleModal").modal("hide");
 						$("#tableDiv").prop("hidden",false);
 		 	        		$("#ValueTable,#CalculateDiv").prop("hidden",true);
-		 	        		$("#cntConnection").html(++cnt);
+//		 	        		$("#cntConnection").html(++cnt);
 		 	        		$("#userLength").val("");
 		 	        		
 		 	        		$(".red-circle, .gray-rectangle").css("pointer-events", "auto");
 		 	        		 toastr.success("Now we can attempt the next connection.");
-	        			 addJsonCreateTable(correctLength);
+	        			 addJsonCreateTable(userLength);
 						id=0;
 					
 						if(cnt==7){
@@ -261,8 +295,9 @@ function GAMimic1() {
 
 
 		let totalCorrectLength=0;
-	function addJsonCreateTable(correctLength) { 
-		let tempJson = { connection: correctLength }; // Create an object
+	function addJsonCreateTable(userLength) { 
+		cnt++;
+		let tempJson = { connection: userLength }; // Create an object
 		arrayJson.push(tempJson); // Add to array
 		masterJson.demo = arrayJson; // Store in masterJson
 
