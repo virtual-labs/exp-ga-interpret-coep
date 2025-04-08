@@ -7,10 +7,11 @@ let arrayJson=[];
 var selectedValue=0;
   var image ;
   var cnt=1;
+  var cnt1=1;
   var zPos; // Z is constant as we are in a 2D plane
 function GAMimic() {
 	$("#counter").prop("hidden",false);
-	$("#Header").html("<center>ELECTRICAL WRING WITH JUNCTION BOX </center>");
+	$("#Header").html("<center>ELECTRICAL WIRING WITH JUNCTION BOX</center>");
 	var htm=`
 	<div class="row" style="margin-bottom:5px;">
 	<div class="col-sm-2">
@@ -40,11 +41,6 @@ function GAMimic() {
 			    </div>
 			  </div>
 <!-- 			  End Modal ProStr -->
-
-
-
-	     
-
 
 	</div>
 	</div>
@@ -77,7 +73,7 @@ function GAMimic() {
 	</div>
 	<div class="row" style="margin-top:10px" id="selectDiv">
 	<div class="col-sm-6">
-			<label for="options"><center><b>Select the appropriate route for the cabling - </b></center></label>
+			<label for="options"><center><b>Select the appropriate route for the cabling </b></center></label>
 			</div>
 			<div class="col-sm-6">
 			<select id="options" class="form-control">
@@ -120,18 +116,27 @@ function GAMimic() {
 	
 	</div>
 	</div>
-	<div class="row" style="margin-top:10px">
-	<div class="col-sm-12" id="TotalDiv">
 	
+	<div class="row" style="margin-top: 10px;
+    background-color: #adb5bd;
+    padding: 8px 0px;
+    border-style: double;" id="TotalLengthDiv" hidden>
+	<div class="col-sm-6" >
+		 <p><b>Calculate total required Length of cable (meter)</b>: </p>
+	</div>
+	<div class="col-sm-3" >
+		<input type="number" id="totaluserLength" class="form-control">
+	</div>
+	<div class="col-sm-3" >
+	<center><button type="button" class="btn btn-danger" id="totalSubmitLength" data-correct-length="">Submit</button></center>
 	</div>
 	</div>
 	<div class="row" style="margin-top:10px">
 	<div class="col-sm-10" id="">
-	
 	</div>
 	<div class="col-sm-2" >
 	
-	<button type="button" class="btn btn-danger" id="next" >NEXT</button>
+	<button type="button" class="btn btn-danger" id="next" hidden>NEXT</button>
 	</div>
 	</div>
 	</div>
@@ -149,7 +154,76 @@ function GAMimic() {
 		result();
 	
 	});
+	  var id=0;
+	  $('#totalSubmitLength').click(function(){
+		  calCnt++;
+		  $("#ModalBody").css("color", "brown");
+		  $("#exampleModal").modal("show");
+		   
+		    let userLength = parseInt($("#totaluserLength").val()); // Get input value
+		    let totalMeterTemp=parseFloat(totalCorrectLength/1000);
+			let totalMeter = Math.ceil(totalMeterTemp);
+			console.log(totalMeter);
+		    
+		  if(totaluserLength=="" || isAlphabetical(totaluserLength)){
+			  $("#ModalBody").html("Please enter a length.");
+			
+		}
+		else
+			{
+				if (id <= 3) {
+					if (totalMeter==userLength) {
+						 $("#ModalBody").css("color", "#0E295E");
+						$("#next").prop("hidden",false);
+						$("#totaluserLength,#totalSubmitLength").prop("disabled",true);
+						
+				        $("#exampleModal").modal("hide");
+							$("#coordinateDiv").html(`<center><div class="alert alert-success">
+									  Total Cable Length(mm) = <strong>${totalCorrectLength}mm</strong> <br>
+									   The additional cable, beyond the measured one, is required for connection to the junction box. = <strong>${totalMeter} meter</strong> <br>
+									</div></center>`);
+							
+						}	
+					 else  {
+						$("#ModalBody").html(`Entered value is incorrect.Try it again.`);
+						
+					}
+
+			
+				} else if (id == 4) {
+					 $("#ModalBody").css("color", "brown");
+					$("#ModalBody").html(`<p>Here is the length formula:</p>
+	               <b>Total Cable Length(meter)=Total Cable Length(mm)/1000</b>
+	               
+	               `);	
+					
+				} else {
+					userLength = $("#totaluserLength").val();
+
+					if (totalMeter==userLength) {
+						 $("#ModalBody").css("color", "#0E295E");
+						 $("#next").prop("hidden",false);
+							$("#totaluserLength,#totalSubmitLength").prop("disabled",true);
+				        $("#exampleModal").modal("hide");
+							$("#coordinateDiv").html(`<center><div class="alert alert-success">
+									  Total Cable Length(mm) = <strong>${totalCorrectLength}mm</strong> <br>
+									   The additional cable, beyond the measured one, is required for connection to the junction box. = <strong>${totalMeter} meter</strong> <br>
+									</div></center>`);
+							
+						}
+					 
+					 else {
+			
+						 $("#ModalBody").css("color", "#0E295E");
+						   $("#ModalBody").html(`Correct Length: ${totalMeter} mm`);
+						
+						$("#ModalBody").html("<b class='boldTextblue'>Correct Length of cable " + totalMeter+'</b> meter');
+					}
+				}
+				id++;
 	
+			} 
+	  });
 	  var id=0;
 	  $('#submitLength').click(function(){
 		  calCnt++;
@@ -178,8 +252,10 @@ function GAMimic() {
 				        $("#exampleModal").modal("hide");
 						$("#tableDiv").prop("hidden",false);
 		 	        		$("#ValueTable,#CalculateDiv").prop("hidden",true);
-		 	        		$("#cntConnection").html(++cnt);
+//		 	        		$("#cntConnection").html(++cnt);
 		 	        		$("#userLength").val("");
+		 	        		$(".red-circle, .gray-rectangle").css("pointer-events", "auto");
+		 	        		 toastr.success("Now we can attempt the next connection.");
 	        			 addJsonCreateTable(correctLength);
 						id=0;
 						if(cnt==9){
@@ -190,10 +266,13 @@ function GAMimic() {
 							$("#ModalBody").css("color", "brown");
 							$("#ModalBody").html(`Calculate the total length of the cable required for this project.`);
 							$("#selectDiv").prop("hidden",true);
-							$("#coordinateDiv").html(`<center><div class="alert alert-success">
-									  Total Cable Length(mm) = <strong>${totalCorrectLength}mm</strong> <br>
-									   The additional cable, beyond the measured one, is required for connection to the junction box. = <strong>${totalMeter} meter</strong> <br>
-									</div></center>`);
+							
+							$("#TotalLengthDiv").prop("hidden",false);
+							
+//							$("#coordinateDiv").html(`<center><div class="alert alert-success">
+//									  Total Cable Length(mm) = <strong>${totalCorrectLength}mm</strong> <br>
+//									   The additional cable, beyond the measured one, is required for connection to the junction box. = <strong>${totalMeter} meter</strong> <br>
+//									</div></center>`);
 							
 						}	
 					} else  {
@@ -205,15 +284,22 @@ function GAMimic() {
 			                $("#ModalBody").html(`Much larger than expected. `);
 			            } else {
 			                // General incorrect case
-			                $("#ModalBody").html(`Incorrect.`);
+			                $("#ModalBody").html(`Entered value is incorrect.Try it again.`);
 			            }
 					}
 
 
 				} else if (id == 4) {
 					 $("#ModalBody").css("color", "brown");
-					$("#ModalBody").html(`<p>Here is the length formula:</p>
-	                <img src="images/lengthCal.png" alt="Length Formula" style="width:100%;">`);	
+					 if(selectedValue==1){
+							$("#ModalBody").html(`<p>Here is the length formula:</p>
+			                <img src="images/lengthCal.png" alt="Length Formula" style="width:100%;">`);	 
+					 }
+					 else if(selectedValue==2){
+							$("#ModalBody").html(`<p>Here is the length formula:</p>
+			                <img src="images/Formula_Length.png" alt="Length Formula" style="width:100%;">`);	
+					 }
+				
 					
 				} else {
 					userLength = $("#userLength").val();
@@ -225,9 +311,10 @@ function GAMimic() {
 				        $("#exampleModal").modal("hide");
 						$("#tableDiv").prop("hidden",false);
 		 	        		$("#ValueTable,#CalculateDiv").prop("hidden",true);
-		 	        		$("#cntConnection").html(++cnt);
+//		 	        		$("#cntConnection").html(++cnt);
 		 	        		$("#userLength").val("");
 		 	        		 $(".red-circle, .gray-rectangle").css("pointer-events", "auto");
+		 	        		 toastr.success("Now we can attempt the next connection.");
 		 	        		
 	        			 addJsonCreateTable(correctLength);
 						id=0;
@@ -238,12 +325,13 @@ function GAMimic() {
 							console.log(totalMeter); 
 							$("#ModalBody").css("color", "brown");
 							$("#selectDiv").prop("hidden",true);
-							
+							$("#TotalLengthDiv").prop("hidden",false);
 							$("#ModalBody").html(`Calculate the total length of the cable required for this project.`);
-							$("#coordinateDiv").html(`<center><div class="alert alert-success">
-									  Total Cable Length = <strong>${totalCorrectLength}mm</strong> <br>
-									  The additional cable, beyond the measured one, is required for connection to the junction box = <strong>${totalMeter}Meter</strong> <br>
-									</div></center>`);
+							
+//							$("#coordinateDiv").html(`<center><div class="alert alert-success">
+//									  Total Cable Length = <strong>${totalCorrectLength}mm</strong> <br>
+//									  The additional cable, beyond the measured one, is required for connection to the junction box = <strong>${totalMeter}Meter</strong> <br>
+//									</div></center>`);
 						}
 						
 					} else {
@@ -284,7 +372,7 @@ function GAMimic() {
     
     // Header for Sr. No.
     let srNoHeader = document.createElement("th");
-    srNoHeader.textContent = "Sr. No";
+    srNoHeader.textContent = "Cable No";
     headerRow.appendChild(srNoHeader);
     
     // Header for Connection Length
@@ -431,7 +519,8 @@ function GAMimic() {
                         }
                     });
 
-                    function drawSquareLine(start, end) {console.log("end.x " + end.x);
+                    function drawSquareLine(start, end) {
+                    	console.log("end.x " + end.x);
                     console.log("end.y " + end.y);
 
                     let dx = end.x - start.x;
@@ -451,6 +540,8 @@ function GAMimic() {
                     let offset = existingLines.length * 5; // Each new line is shifted by 5px
                     let adjustedStartY = start.y + offset;
                     let adjustedEndY = end.y + offset;
+                    
+                  
 
                     // Create first horizontal line
                     let line1 = $("<div class='line'></div>").appendTo(".image-container");
@@ -460,7 +551,10 @@ function GAMimic() {
                         width: "0px",
                         height: "2px"
                     });
-
+                    
+                    let midX = (start.x + end.x) / 2;
+            	    let midY = (start.y + end.y) / 2;
+            	    
                     // Animate horizontal line
                     line1.animate({ width: lengthX + "px" }, 500, function () {
                         let verticalStartY = adjustedStartY;
@@ -474,11 +568,15 @@ function GAMimic() {
                             width: "2px",
                             height: "0px"
                         });
+                        
+
                         $(".red-circle, .gray-rectangle").css("pointer-events", "none");
                         toastr.error("Prevent click until calculation is complete");
                         // Animate vertical line
                         line2.animate({ height: lengthY + "px", top: Math.min(verticalStartY, verticalEndY) + "px" }, 500, function () {
                             $("#submitLength").attr("data-correct-length", parseInt(lengthX + lengthY) * 10);
+                            
+                            
                             var htm = `
                             <table class="table table-bordered">
                                 <thead>
@@ -498,6 +596,25 @@ function GAMimic() {
                             $("#ValueTable").html(htm);
                             $("#CalculateDiv,#ValueTable").prop("hidden", false);
                             
+                        });
+                        // ✅ Label placement logic here
+                        let midX = start.x + dx / 2;
+                        let midY = adjustedStartY + dy / 2;
+
+                        let label = $("<div class='line-label'></div>").appendTo(".image-container");
+                        label.text("Cable - " + (cnt1++));
+                        label.css({
+                            position: "absolute",
+                            fontSize: "12px",
+                            fontWeight: "bold",
+                            backgroundColor: "rgba(255,255,255,0.8)",
+                            padding: "2px 4px",
+                            border: "1px solid #ccc",
+                            borderRadius: "4px",
+                            color: "#000",
+                            left: start.x + "px",
+                            top: adjustedStartY + "px", 
+                            zIndex: 10
                         });
                     });
 }
@@ -576,12 +693,12 @@ function GAMimic() {
                 	    let midY = (start.y + end.y) / 2;
 
                 	    // Create Label
-//                	    let label = $("<div class='line-label'></div>").appendTo(".image-container");
-//                	    label.text(parseInt(length * 10) + "mm");
-//                	    label.css({
-//                	        left: midX + "px",
-//                	        top: midY + "px"
-//                	    });
+                	    let label = $("<div class='line-label'></div>").appendTo(".image-container");
+                	    label.text("Cable - "+(cnt1++));
+                	    label.css({
+                	        left: midX + "px",
+                	        top: midY + "px"
+                	    });
 
                 	    // Update the attribute every time a line is drawn
                 	    $("#submitLength").attr("data-correct-length", length * 10);

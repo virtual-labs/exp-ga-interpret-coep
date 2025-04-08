@@ -9,6 +9,7 @@ function GAMimic1() {
 	var selectedValue=0;
 	  var image ;
 	  var cnt=1;
+	  var cnt1=1;
 	  var zPos; // Z is constant as we are in a 2D plane
 	$("#counter").prop("hidden",false);
 	$("#Header").html("<center>NUMANTIC TUBING WITH AIR HEADER</center>");
@@ -41,11 +42,6 @@ function GAMimic1() {
 			    </div>
 			  </div>
 <!-- 			  End Modal ProStr -->
-
-
-
-	     
-
 
 	</div>
 	</div>
@@ -131,7 +127,7 @@ function GAMimic1() {
 	
 	</div>
 	<div class="col-sm-2" id="result">
-	<button type="button" class="btn btn-danger" id="result" >Result</button>
+	<button type="button" class="btn btn-danger" id="result" hidden >Result</button>
 	</div>
 	</div>-->
 	</div>
@@ -175,9 +171,11 @@ function GAMimic1() {
 		 	        		$("#ValueTable,#CalculateDiv").prop("hidden",true);
 		 	        		$("#cntConnection").html(++cnt);
 		 	        		$("#userLength").val("");
+		 	        		$(".red-circle, .gray-rectangle").css("pointer-events", "auto");
+		 	        		 toastr.success("Now we can attempt the next connection.");
 	        			 addJsonCreateTable(correctLength);
 						id=0;
-						if(cnt==9){
+						if(cnt==7){
 							$("#exampleModal").modal("hide");
 							let totalMeterTemp=parseFloat(totalCorrectLength/1000);
 							let totalMeter = Math.ceil(totalMeterTemp);
@@ -200,15 +198,21 @@ function GAMimic1() {
 			                $("#ModalBody").html(`Much larger than expected. `);
 			            } else {
 			                // General incorrect case
-			                $("#ModalBody").html(`Incorrect.`);
+			                $("#ModalBody").html(`Entered value is incorrect.Try it again.`);
 			            }
 					}
 
 
 				} else if (id == 4) {
 					 $("#ModalBody").css("color", "brown");
-					$("#ModalBody").html(`<p>Here is the length formula:</p>
-	                <img src="images/lengthCal.png" alt="Length Formula" style="width:100%;">`);	
+					 if(selectedValue==1){
+							$("#ModalBody").html(`<p>Here is the length formula:</p>
+			                <img src="images/lengthCal.png" alt="Length Formula" style="width:100%;">`);	 
+					 }
+					 else if(selectedValue==2){
+							$("#ModalBody").html(`<p>Here is the length formula:</p>
+			                <img src="images/Formula_Length.png" alt="Length Formula" style="width:100%;">`);	
+					 }	
 					
 				} else {
 					userLength = $("#userLength").val();
@@ -222,11 +226,13 @@ function GAMimic1() {
 		 	        		$("#ValueTable,#CalculateDiv").prop("hidden",true);
 		 	        		$("#cntConnection").html(++cnt);
 		 	        		$("#userLength").val("");
-		 	        		 $(".red-circle, .gray-rectangle").css("pointer-events", "auto");
+		 	        		
+		 	        		$(".red-circle, .gray-rectangle").css("pointer-events", "auto");
+		 	        		 toastr.success("Now we can attempt the next connection.");
 	        			 addJsonCreateTable(correctLength);
 						id=0;
 					
-						if(cnt==9){
+						if(cnt==7){
 							let totalMeterTemp=parseFloat(totalCorrectLength/1000);
 							let totalMeter = Math.ceil(totalMeterTemp);
 							console.log(totalMeter); 
@@ -278,7 +284,7 @@ function GAMimic1() {
     
     // Header for Sr. No.
     let srNoHeader = document.createElement("th");
-    srNoHeader.textContent = "Sr. No";
+    srNoHeader.textContent = "Cable No";
     headerRow.appendChild(srNoHeader);
     
     // Header for Connection Length
@@ -321,7 +327,7 @@ function GAMimic1() {
 	          <div class="container mt-4">
     
    <div class="alert alert-warning">
-  <strong>Connect the field instrument (red circle) with air header click source and destination.</strong> 
+  <strong>Connect the field instrument (red circle) with air header(yellow rectangle) click source and destination.</strong> 
 </div>
     <div class="image-container">
         <img src="images/airfilter.jpg" alt="Example Image" id="ActualName">
@@ -394,40 +400,53 @@ function GAMimic1() {
                 $('#zPos').text(zPos);
             });
             
-            function WallDesign(){
-            	
-                    let selectedPoint = null;
-                    let usedPoints = [];
-                  
-//                    zPos = 0; // Z is constant as we are in a 2D plane
-                    $(".red-circle, .gray-rectangle").click(function (e) {
-                        e.stopPropagation();
-                        let element = $(this);
-                        let point = {
-                            x: element.position().left + 10, 
-                            y: element.position().top + 10,
-                            type: element.data("type"),
-                            element: element
-                        };
+            function WallDesign() {
+                let selectedPoint = null;
+                let usedPoints = [];
 
-                        if (usedPoints.includes(element[0])) {
-                            alert("This point is already connected!");
-                            conCnt++;
-                            return;
-                        }
+                $(".red-circle, .gray-rectangle").click(function (e) {
+                    e.stopPropagation();
+                    let element = $(this);
+                    let point = {
+                        x: element.position().left + 10, 
+                        y: element.position().top + 10,
+                        type: element.data("type"),
+                        element: element
+                    };
 
-                        if (!selectedPoint) {
-                            selectedPoint = point;
-                        } else {
-                            if (selectedPoint.type !== point.type) {
-                                drawSquareLine(selectedPoint, point);
-                                usedPoints.push(selectedPoint.element[0], point.element[0]);
+                    if (usedPoints.includes(element[0])) {
+                        alert("This point is already connected!");
+                        conCnt++;
+                        return;
+                    }
+
+                    if (!selectedPoint) {
+                        selectedPoint = point;
+                    } else {
+                    	
+                    	
+                    	 let id1 = selectedPoint.element.attr("id");
+                         let id2 = point.element.attr("id");
+
+                        console.log("kfgkjgkj");
+
+                        if ((id1 === "r7" || id1 === "r8") && id2.startsWith("g") ||
+                                (id2 === "r7" || id2 === "r8") && id1.startsWith("g")) {
+                                toastr.error("Since this is electronic instrument air supply is not required.");
+                                selectedPoint = null;
+                                return;
                             }
-                            selectedPoint = null;
-                        }
-                    });
 
-                    function drawSquareLine(start, end) {console.log("end.x " + end.x);
+                        if (selectedPoint.type !== point.type) {
+                            drawSquareLine(selectedPoint, point);
+                            usedPoints.push(selectedPoint.element[0], point.element[0]);
+                        }
+                        selectedPoint = null;
+                    }
+                });
+
+                function drawSquareLine(start, end) {
+                    console.log("end.x " + end.x);
                     console.log("end.y " + end.y);
 
                     let dx = end.x - start.x;
@@ -479,7 +498,7 @@ function GAMimic1() {
                                 <thead>
                                     <tr class="table-primary">
                                         <th scope="col">Component (Start Point)</th>
-                                        <th scope="col">Junction Box (End Point)</th>
+                                        <th scope="col">Air Header (End Point)</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -492,30 +511,50 @@ function GAMimic1() {
                             `;
                             $("#ValueTable").html(htm);
                             $("#CalculateDiv,#ValueTable").prop("hidden", false);
-                            $("#ActualName").css("pointer-events", "none");
                         });
                     });
-}
-                    image = $('#ActualName,.red-circle, .gray-rectangle,.line,.line-label');
-                    image.on('mousemove', function(event) {
-                        var offset = image.offset();
-                        var x = parseInt((event.pageX - offset.left)*10);
-                        var y =  parseInt((event.pageY - offset.top)*10);
-                        var z =parseInt((event.pageY - offset.top)*10);
-                        $('#xPos').text(x);
-                        $('#yPos').text(750);
-                        $('#zPos').text(y);
-                    });
+                    // ✅ Label placement logic here
+                    let midX = start.x + dx / 2;
+                    let midY = adjustedStartY + dy / 2;
 
-                    image.on('mouseleave', function() {
-                        // Reset to 0 when the mouse leaves the image
-                        $('#xPos').text(0);
-                        $('#yPos').text(0);
-                        $('#zPos').text(zPos);
+                    let label = $("<div class='line-label'></div>").appendTo(".image-container");
+                    label.text("Cable - " + (cnt1++));
+                    label.css({
+                        position: "absolute",
+                        fontSize: "12px",
+                        fontWeight: "bold",
+                        backgroundColor: "rgba(255,255,255,0.8)",
+                        padding: "2px 4px",
+                        border: "1px solid #ccc",
+                        borderRadius: "4px",
+                        color: "#000",
+                        left: start.x + "px",
+                        top: adjustedStartY + "px", 
+                        zIndex: 10
                     });
-                    
-            	
+                    $(".red-circle, .gray-rectangle").css("pointer-events", "none");
+                    toastr.error("Prevent click until calculation is complete");
+                }
+
+                image = $('#ActualName,.red-circle, .gray-rectangle,.line,.line-label');
+                image.on('mousemove', function(event) {
+                    var offset = image.offset();
+                    var x = parseInt((event.pageX - offset.left) * 10);
+                    var y = parseInt((event.pageY - offset.top) * 10);
+                    var z = parseInt((event.pageY - offset.top) * 10);
+                    $('#xPos').text(x);
+                    $('#yPos').text(750);
+                    $('#zPos').text(y);
+                });
+
+                image.on('mouseleave', function() {
+                    // Reset to 0 when the mouse leaves the image
+                    $('#xPos').text(0);
+                    $('#yPos').text(0);
+                    $('#zPos').text(zPos);
+                });
             }
+
             function DirectDesign(){
             	 let selectedPoint = null;
                  let usedPoints = []; // Store used points to prevent reusing them
@@ -541,14 +580,27 @@ function GAMimic1() {
 
                      if (!selectedPoint) {
                          selectedPoint = point;
-                     } else {
-                         if (selectedPoint.type !== point.type) {
-                             drawLine(selectedPoint, point);
-                             // Mark both points as used
-                             usedPoints.push(selectedPoint.element[0], point.element[0]);
-                         }
-                         selectedPoint = null; // Reset selection
-                     }
+                     }  else {
+                    	
+                    	
+                    	 let id1 = selectedPoint.element.attr("id");
+                         let id2 = point.element.attr("id");
+
+                        console.log("kfgkjgkj");
+
+                        if ((id1 === "r7" || id1 === "r8") && id2.startsWith("g") ||
+                                (id2 === "r7" || id2 === "r8") && id1.startsWith("g")) {
+                                toastr.error("Since this is electronic instrument air supply is not required.");
+                                selectedPoint = null;
+                                return;
+                            }
+
+                        if (selectedPoint.type !== point.type) {
+                        	drawLine(selectedPoint, point);
+                            usedPoints.push(selectedPoint.element[0], point.element[0]);
+                        }
+                        selectedPoint = null;
+                    }
                  });
 
                  function drawLine(start, end) {
@@ -565,18 +617,19 @@ function GAMimic1() {
                 	        width: length + "px",
                 	        transform: `rotate(${angle}deg)`
                 	    });
-
+                	    $(".red-circle, .gray-rectangle").css("pointer-events", "none");
+                        toastr.error("Prevent click until calculation is complete");
                 	    // Midpoint for Label
                 	    let midX = (start.x + end.x) / 2;
                 	    let midY = (start.y + end.y) / 2;
 
-                	    // Create Label
-//                	    let label = $("<div class='line-label'></div>").appendTo(".image-container");
-//                	    label.text(parseInt(length * 10) + "mm");
-//                	    label.css({
-//                	        left: midX + "px",
-//                	        top: midY + "px"
-//                	    });
+                	     //Create Label
+                	    let label = $("<div class='line-label'></div>").appendTo(".image-container");
+                	    label.text("Cable - "+(cnt1++));
+                	    label.css({
+                	        left: midX + "px",
+                	        top: midY + "px"
+                	    });
 
                 	    // Update the attribute every time a line is drawn
                 	    $("#submitLength").attr("data-correct-length", length * 10);
@@ -591,7 +644,7 @@ function GAMimic1() {
                 	        <thead>
                 	            <tr class="table-primary">
                 	                <th scope="col">Component (Start Point)</th>
-                	                <th scope="col">Junction Box (End Point)</th>
+                	                <th scope="col">Air Header (End Point)</th>
                 	            </tr>
                 	        </thead>
                 	        <tbody>
