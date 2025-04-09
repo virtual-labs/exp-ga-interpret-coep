@@ -13,7 +13,7 @@ function GAMimic1() {
 	  var cnt1=1;
 	  var zPos; // Z is constant as we are in a 2D plane
 	$("#counter").prop("hidden",false);
-	$("#Header").html("<center>NUMANTIC TUBING WITH AIR HEADER</center>");
+	$("#Header").html("<center>PNEUMATIC TUBING WITH AIR HEADER</center>");
 	var htm=`
 	<div class="row" style="margin-bottom:5px;">
 	<div class="col-sm-2">
@@ -75,13 +75,13 @@ function GAMimic1() {
 	</div>
 	<div class="row" style="margin-top:10px" id="selectDiv">
 	<div class="col-sm-6">
-			<label for="options"><center><b>Select the appropriate route for the cabling - </b></center></label>
+			<label for="options"><center><b>Select the appropriate route for the tubing - </b></center></label>
 			</div>
 			<div class="col-sm-6">
 			<select id="options" class="form-control">
-			 <option value="0">-----------Select the appropriate route for the cabling------------</option>
+			 <option value="0">-----------Select the appropriate route for the tubing------------</option>
 			  <option value="1">Along with the wall</option>
-			  <option value="2">Direct connection to the junction box</option>
+			  <option value="2">Direct connection to the air header</option>
 			</select>
 		</div>
 	</div>
@@ -93,12 +93,12 @@ function GAMimic1() {
 	</div>
 	<div class="row" style="margin-top:10px" id="CalculateDiv" hidden>
 	<div class="output-card"  >
-			<h5 class=" headingCo"><center>FIND LENGTH OF CABLE FOR EACH COMPONENT TO THE JUNCTION BOX</center></h5>
+			<h5 class=" headingCo"><center>FIND LENGTH OF CABLE FOR EACH COMPONENT TO THE AIR HEADER</center></h5>
 			</div>
 	<div class="row calculatePanel"> 
 	<div class="col-sm-6" >
 		
-			 <p><b>Calculate required Length of cable (mm)</b>: </p>
+			 <p><b>Calculate required Length of tube (mm)</b>: </p>
 			
 	</div>
 	<div class="col-sm-3" >
@@ -118,19 +118,29 @@ function GAMimic1() {
 	
 	</div>
 	</div>
+	<div class="row" style="margin-top: 10px;
+    background-color: #adb5bd;
+    padding: 8px 0px;
+    border-style: double;" id="TotalLengthDiv" hidden>
+	<div class="col-sm-6" >
+		 <p><b>Calculate total required Length of tubing (meter)</b>: </p>
+	</div>
+	<div class="col-sm-3" >
+		<input type="number" id="totaluserLength" class="form-control">
+	</div>
+	<div class="col-sm-3" >
+	<center><button type="button" class="btn btn-danger" id="totalSubmitLength" data-correct-length="">Submit</button></center>
+	</div>
+	</div>
 	<div class="row" style="margin-top:10px">
-	<div class="col-sm-12" id="TotalDiv">
-	
-	</div>
-	</div>
-<!--	<div class="row" style="margin-top:10px">
 	<div class="col-sm-10" id="">
+	</div>
+	<div class="col-sm-2" >
 	
+		<button type="button" class="btn btn-danger" id="result" hidden >Result</button>
 	</div>
-	<div class="col-sm-2" id="result">
-	<button type="button" class="btn btn-danger" id="result" hidden >Result</button>
 	</div>
-	</div>-->
+	</div>
 	</div>
 	
 	`;
@@ -141,7 +151,92 @@ function GAMimic1() {
 		result();
 	
 	});
+	var id=0;
+	  $('#totalSubmitLength').click(function(){
+		  calCnt++;
+		  $("#ModalBody").css("color", "brown");
+		  $("#exampleModal").modal("show");
+		   
+		     userLength = parseInt($("#totaluserLength").val()); // Get input value
+		    let totalMeterTemp=parseFloat(totalCorrectLength/1000);
+			let totalMeter = Math.ceil(totalMeterTemp);
+			console.log(totalMeter);
+		    
+		  if(totaluserLength=="" || isAlphabetical(totaluserLength)){
+			  $("#ModalBody").html("Please enter a length.");
+			
+		}
+		else
+			{
+				if (id <= 3) {
+					if (totalMeter==userLength) {
+						 $("#ModalBody").css("color", "#0E295E");
+						$("#result").prop("hidden",false);
+						$("#totaluserLength,#totalSubmitLength").prop("disabled",true);
+						mainJson.mainPageTotal1=totalMeter;
+						console.log(mainJson);
+						$("#ModalBody").html("Go to result page");
+							$("#coordinateDiv").html(`<center><div class="alert alert-success">
+									  Total Cable Length(mm) = <strong>${totalCorrectLength}mm</strong> <br>
+									   The additional cable, beyond the measured one, is required for connection to the air header. = <strong>${totalMeter} meter</strong> <br>
+									</div></center>`);
+							
+						}	
+					 else  {
+						$("#ModalBody").html(`Entered value is incorrect.Try it again.`);
+						
+					}
+			
+				} else if (id == 4) {
+					
+					if (totalMeter==userLength) {
+						 $("#ModalBody").css("color", "#0E295E");
+						$("#result").prop("hidden",false);
+						$("#totaluserLength,#totalSubmitLength").prop("disabled",true);
+						mainJson.mainPageTotal1=totalMeter;
+						console.log(mainJson);
+						$("#ModalBody").html("Go to result page");
+							$("#coordinateDiv").html(`<center><div class="alert alert-success">
+									  Total Cable Length(mm) = <strong>${totalCorrectLength}mm</strong> <br>
+									   The additional cable, beyond the measured one, is required for connection to the air header. = <strong>${totalMeter} meter</strong> <br>
+									</div></center>`);
+							
+						}	
+					 else  {
+						 $("#ModalBody").css("color", "brown");
+							$("#ModalBody").html(`<p>Here is the length formula:</p>
+			               <b>Total tube Length(meter)=Total tube Length(mm)/1000</b>	 `);	
+					}
+					
+					
+					
+				} else {
+					userLength = $("#totaluserLength").val();
+
+					if (totalMeter==userLength) {
+						 $("#ModalBody").css("color", "#0E295E");
+						 $("#result").prop("hidden",false);
+						 mainJson.mainPageTotal1=totalMeter;
+							$("#totaluserLength,#totalSubmitLength").prop("disabled",true);
+							$("#ModalBody").html("Go to next Level");
+							$("#coordinateDiv").html(`<center><div class="alert alert-success">
+									  Total Cable Length(mm) = <strong>${totalCorrectLength}mm</strong> <br>
+									   The additional cable, beyond the measured one, is required for connection to the air header. = <strong>${totalMeter} meter</strong> <br>
+									</div></center>`);
+							}
+					 
+					 else {
+			
+						 $("#ModalBody").css("color", "#0E295E");
+						   $("#ModalBody").html(`Correct Length: ${totalMeter} mm`);
+						
+						$("#ModalBody").html("<b class='boldTextblue'>Correct Length of cable " + totalMeter+'</b> meter');
+					}
+				}
+				id++;
 	
+			} 
+	  });
 	  var id=0;
 	  $('#submitLength').click(function(){
 		  calCnt++;
@@ -165,7 +260,7 @@ function GAMimic1() {
 				if (id <= 3) {
 					if (userLength >= min && userLength <= max) {
 						 $("#ModalBody").css("color", "#0E295E");
-						 $("#ModalBody").html(`Length of the cable is correct, attempt the next connection.`);
+						 $("#ModalBody").html(`Length of the tube is correct, attempt the next connection.`);
 					      
 				        $("#exampleModal").modal("hide");
 						$("#tableDiv").prop("hidden",false);
@@ -182,12 +277,10 @@ function GAMimic1() {
 							let totalMeter = Math.ceil(totalMeterTemp);
 							console.log(totalMeter); 
 							$("#ModalBody").css("color", "brown");
-							$("#ModalBody").html(`Calculate the total length of the cable required for this project.`);
+							$("#ModalBody").html(`Calculate the total length of the tube required for this project.`);
 							$("#selectDiv").prop("hidden",true);
-							$("#coordinateDiv").html(`<center><div class="alert alert-success">
-									  Total Cable Length(mm) = <strong>${totalCorrectLength}mm</strong> <br>
-									   The additional cable, beyond the measured one, is required for connection to the junction box. = <strong>${totalMeter} meter</strong> <br>
-									</div></center>`);
+							
+							$("#TotalLengthDiv").prop("hidden",false);
 							
 						}	
 					} else  {
@@ -208,7 +301,7 @@ function GAMimic1() {
 				
 					if (userLength >= min && userLength <= max) {
 						 $("#ModalBody").css("color", "#0E295E");
-						 $("#ModalBody").html(`Length of the cable is correct, attempt the next connection.`);
+						 $("#ModalBody").html(`Length of the tube is correct, attempt the next connection.`);
 					      
 				        $("#exampleModal").modal("hide");
 						$("#tableDiv").prop("hidden",false);
@@ -225,12 +318,9 @@ function GAMimic1() {
 							let totalMeter = Math.ceil(totalMeterTemp);
 							console.log(totalMeter); 
 							$("#ModalBody").css("color", "brown");
-							$("#ModalBody").html(`Calculate the total length of the cable required for this project.`);
+							$("#ModalBody").html(`Calculate the total length of the tube required for this project.`);
 							$("#selectDiv").prop("hidden",true);
-							$("#coordinateDiv").html(`<center><div class="alert alert-success">
-									  Total Cable Length(mm) = <strong>${totalCorrectLength}mm</strong> <br>
-									   The additional cable, beyond the measured one, is required for connection to the junction box. = <strong>${totalMeter} meter</strong> <br>
-									</div></center>`);
+							$("#TotalLengthDiv").prop("hidden",false);
 							
 						}	
 					}
@@ -254,7 +344,7 @@ function GAMimic1() {
 					 if (userLength >= min && userLength <= max) {
 						 $("#ModalBody").css("color", "#0E295E");
 						 $("#exampleModal").modal("hide");
-				        $("#ModalBody").html(`Length of the cable is correct, attempt the next connection.`);
+				        $("#ModalBody").html(`Length of the tube is correct, attempt the next connection.`);
 				        $("#exampleModal").modal("hide");
 						$("#tableDiv").prop("hidden",false);
 		 	        		$("#ValueTable,#CalculateDiv").prop("hidden",true);
@@ -273,11 +363,13 @@ function GAMimic1() {
 							$("#ModalBody").css("color", "brown");
 							$("#selectDiv").prop("hidden",true);
 							
-							$("#ModalBody").html(`Calculate the total length of the cable required for this project.`);
+							$("#ModalBody").html(`Calculate the total length of the tube required for this project.`);
 							$("#coordinateDiv").html(`<center><div class="alert alert-success">
 									  Total Cable Length = <strong>${totalCorrectLength}mm</strong> <br>
-									  The additional cable, beyond the measured one, is required for connection to the air header = <strong>${totalMeter}Meter</strong> <br>
+									  The additional tube, beyond the measured one, is required for connection to the air header = <strong>${totalMeter}Meter</strong> <br>
 									</div></center>`);
+							$("#TotalLengthDiv").prop("hidden",false);
+							
 						}
 						
 					} else {
@@ -285,7 +377,7 @@ function GAMimic1() {
 						 $("#ModalBody").css("color", "#0E295E");
 						   $("#ModalBody").html(`Correct Length: ${correctLength} mm`);
 						
-						$("#ModalBody").html("<b class='boldTextblue'>Correct Length of cable " + min+'</b> mm');
+						$("#ModalBody").html("<b class='boldTextblue'>Correct Length of tube " + min+'</b> mm');
 					}
 				}
 				id++;
@@ -297,7 +389,7 @@ function GAMimic1() {
 		let totalCorrectLength=0;
 	function addJsonCreateTable(userLength) { 
 		cnt++;
-		let tempJson = { connection: userLength }; // Create an object
+		let tempJson = { connection: parseInt(userLength) }; // Create an object
 		arrayJson.push(tempJson); // Add to array
 		masterJson.demo = arrayJson; // Store in masterJson
 
@@ -319,12 +411,12 @@ function GAMimic1() {
     
     // Header for Sr. No.
     let srNoHeader = document.createElement("th");
-    srNoHeader.textContent = "Cable No";
+    srNoHeader.textContent = "Tube No";
     headerRow.appendChild(srNoHeader);
     
     // Header for Connection Length
     let headerCell = document.createElement("th");
-    headerCell.textContent = "Cable Length (mm)";
+    headerCell.textContent = "Tube Length (mm)";
     headerRow.appendChild(headerCell);
     
     table.appendChild(headerRow);
@@ -362,7 +454,7 @@ function GAMimic1() {
 	          <div class="container mt-4">
     
    <div class="alert alert-warning">
-  <strong>Connect the field instrument (red circle) with air header(yellow rectangle) click source and destination.</strong> 
+  <strong>Connect the field instrument (red circle) with Air Header(yellow rectangle) click source and destination.</strong> 
 </div>
     <div class="image-container">
         <img src="images/airfilter.jpg" alt="Example Image" id="ActualName">
@@ -396,7 +488,9 @@ function GAMimic1() {
 	          
 	          if(selectedValue==1)
 	        	  {
+	        		mainJson.selectedValueMainPage1="Along with the wall";
 	        	  	WallDesign();
+	        	
 //	        	  	 $("#CalculateDiv,#ValueTable").fadeIn();
 //	        	     $("#CalculateDiv,#ValueTable").fadeIn("slow");
 //	        	     $("#CalculateDiv,#ValueTable").fadeIn(5000);
@@ -404,6 +498,7 @@ function GAMimic1() {
 	        	  	
 	        	  }
 	          else if(selectedValue==2){
+	        	  mainJson.selectedValueMainPage1="Direct connection to the air header";
 	        	  DirectDesign();
 //	        	  $("#CalculateDiv,#ValueTable").fadeIn();
 //	        	    $("#CalculateDiv,#ValueTable").fadeIn("slow");
@@ -503,7 +598,7 @@ function GAMimic1() {
                     let adjustedEndY = end.y + offset;
 
                     // Create first horizontal line
-                    let line1 = $("<div class='line'></div>").appendTo(".image-container");
+                    let line1 = $("<div class='line' style='background-color:blue;'></div>").appendTo(".image-container");
                     line1.css({
                         left: start.x + "px",
                         top: adjustedStartY + "px", // Adjusted for overlap
@@ -517,7 +612,7 @@ function GAMimic1() {
                         let verticalEndY = adjustedEndY;
 
                         // Create second vertical line
-                        let line2 = $("<div class='line'></div>").appendTo(".image-container");
+                        let line2 = $("<div class='line' style='background-color:blue;'></div>").appendTo(".image-container");
                         line2.css({
                             left: end.x + "px",
                             top: verticalStartY + "px",
@@ -532,14 +627,14 @@ function GAMimic1() {
                             <table class="table table-bordered">
                                 <thead>
                                     <tr class="table-primary">
-                                        <th scope="col">Component (Start Point)</th>
-                                        <th scope="col">Air Header (End Point)</th>
+                                        <th scope="col">Component (Source)</th>
+                                        <th scope="col">Air Header (Destination)</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td style="font-size:15px;font-weight: bold;">(X=${start.x * 10},Y=750,Z=${parseInt(start.y * 10)})</td>
-                                        <td style="font-size:15px;font-weight: bold;">(X=${end.x * 10},Y=750,Z=${parseInt(end.y * 10)})</td>
+                                        <td style="font-size:15px;font-weight: bold;">(X=${parseInt(start.x * 10)},Y=750,Z=${parseInt(start.y * 10)})</td>
+                                        <td style="font-size:15px;font-weight: bold;">(X=${parseInt(end.x * 10)},Y=750,Z=${parseInt(end.y * 10)})</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -645,7 +740,7 @@ function GAMimic1() {
                 	    let angle = Math.atan2(dy, dx) * (180 / Math.PI);
 
                 	    // Create Line
-                	    let line = $("<div class='line'></div>").appendTo(".image-container");
+                	    let line = $("<div class='line' style='background-color:blue;'></div>").appendTo(".image-container");
                 	    line.css({
                 	        left: start.x + "px",
                 	        top: start.y + "px",
@@ -662,8 +757,8 @@ function GAMimic1() {
                 	    let label = $("<div class='line-label'></div>").appendTo(".image-container");
                 	    label.text("Cable - "+(cnt1++));
                 	    label.css({
-                	        left: midX + "px",
-                	        top: midY + "px"
+                	        left: start.x + "px",
+                	        top: start.y + "px"
                 	    });
 
                 	    // Update the attribute every time a line is drawn
@@ -678,14 +773,14 @@ function GAMimic1() {
                 	    <table class="table table-bordered">
                 	        <thead>
                 	            <tr class="table-primary">
-                	                <th scope="col">Component (Start Point)</th>
-                	                <th scope="col">Air Header (End Point)</th>
+                	                <th scope="col">Component (Source)</th>
+                	                <th scope="col">Air Header (Destination)</th>
                 	            </tr>
                 	        </thead>
                 	        <tbody>
                 	            <tr>
-                	                <td style="font-size:15px;font-weight: bold;">(X=${start.x * 10},Y=750,Z=${parseInt(start.y * 10)})</td>
-                	                <td style="font-size:15px;font-weight: bold;">(X=${end.x * 10},Y=750,Z=${parseInt(end.y * 10)})</td>
+                	                <td style="font-size:15px;font-weight: bold;">(X=${parseInt(start.x * 10)},Y=750,Z=${parseInt(start.y * 10)})</td>
+                	                <td style="font-size:15px;font-weight: bold;">(X=${parseInt(end.x * 10)},Y=750,Z=${parseInt(end.y * 10)})</td>
                 	            </tr>
                 	        </tbody>
                 	    </table>`;

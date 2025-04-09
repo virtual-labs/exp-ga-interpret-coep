@@ -3,6 +3,7 @@
  var calCnt=0;
  var resultJson={};
 let masterJson={};
+let mainJson={};
 let arrayJson=[];
 var selectedValue=0;
 let userLength=0;
@@ -177,8 +178,9 @@ function GAMimic() {
 						 $("#ModalBody").css("color", "#0E295E");
 						$("#next").prop("hidden",false);
 						$("#totaluserLength,#totalSubmitLength").prop("disabled",true);
-						
-				        $("#exampleModal").modal("hide");
+						mainJson.mainPageTotal=totalMeter;
+						console.log(mainJson);
+						$("#ModalBody").html("Go to next Level");
 							$("#coordinateDiv").html(`<center><div class="alert alert-success">
 									  Total Cable Length(mm) = <strong>${totalCorrectLength}mm</strong> <br>
 									   The additional cable, beyond the measured one, is required for connection to the junction box. = <strong>${totalMeter} meter</strong> <br>
@@ -197,8 +199,9 @@ function GAMimic() {
 						 $("#ModalBody").css("color", "#0E295E");
 						$("#next").prop("hidden",false);
 						$("#totaluserLength,#totalSubmitLength").prop("disabled",true);
-						
-				        $("#exampleModal").modal("hide");
+						mainJson.mainPageTotal=totalMeter;
+						console.log(mainJson);
+						$("#ModalBody").html("Go to next Level");
 							$("#coordinateDiv").html(`<center><div class="alert alert-success">
 									  Total Cable Length(mm) = <strong>${totalCorrectLength}mm</strong> <br>
 									   The additional cable, beyond the measured one, is required for connection to the junction box. = <strong>${totalMeter} meter</strong> <br>
@@ -219,12 +222,15 @@ function GAMimic() {
 					if (totalMeter==userLength) {
 						 $("#ModalBody").css("color", "#0E295E");
 						 $("#next").prop("hidden",false);
+						 mainJson.mainPageTotal=totalMeter;
+							console.log(mainJson);
 							$("#totaluserLength,#totalSubmitLength").prop("disabled",true);
-				        $("#exampleModal").modal("hide");
+							$("#ModalBody").html("Go to next Level");
 							$("#coordinateDiv").html(`<center><div class="alert alert-success">
 									  Total Cable Length(mm) = <strong>${totalCorrectLength}mm</strong> <br>
 									   The additional cable, beyond the measured one, is required for connection to the junction box. = <strong>${totalMeter} meter</strong> <br>
 									</div></center>`);
+							
 							
 						}
 					 
@@ -344,11 +350,13 @@ function GAMimic() {
 						 $("#ModalBody").css("color", "brown");
 						 if(selectedValue==1){
 								$("#ModalBody").html(`<p>Here is the length formula:</p>
-				                <img src="images/lengthCal.png" alt="Length Formula" style="width:100%;">`);	 
+				                <img src="images/lengthCal.png" alt="Length Formula" style="width:100%;">`);	
+								
 						 }
 						 else if(selectedValue==2){
 								$("#ModalBody").html(`<p>Here is the length formula:</p>
 				                <img src="images/Formula_Length.png" alt="Length Formula" style="width:100%;">`);	
+							
 						 }
 					}
 					
@@ -404,7 +412,7 @@ function GAMimic() {
 		let totalCorrectLength=0;
 	function addJsonCreateTable(userLength) { 
 		cnt++;
-		let tempJson = { connection: userLength }; // Create an object
+		let tempJson = { connection: parseInt(userLength) }; // Create an object
 		arrayJson.push(tempJson); // Add to array
 		masterJson.demo = arrayJson; // Store in masterJson
 
@@ -469,7 +477,7 @@ function GAMimic() {
 	          <div class="container mt-4">
     
    <div class="alert alert-warning">
-  <strong>Connect the field instrument (red circle) with junction box click source and destination.</strong> 
+  <strong>Connect the field instrument (red circle) with Junction Box click source and destination.</strong> 
 </div>
     <div class="image-container">
         <img src="images/gamimicimg.jpeg" alt="Example Image" id="ActualName">
@@ -479,10 +487,10 @@ function GAMimic() {
         <div class="red-circle" data-type="red" id="r2" style="left: 27%; top: 9%;"></div>
         <div class="red-circle" data-type="red" id="r3" style="left: 38%; top: 9%;"></div>
         <div class="red-circle" data-type="red" id="r4" style="left:14% ; top:32% ;"></div>
-        <div class="red-circle" data-type="red" id="r5" style="left: 26%; top:32% ;"></div>
-        <div class="red-circle" data-type="red" id="r6" style="left:38% ; top:32% ;"></div>
+        <div class="red-circle" data-type="red" id="r5" style="left: 26%; top:33% ;"></div>
+        <div class="red-circle" data-type="red" id="r6" style="left:38% ; top:33% ;"></div>
         <div class="red-circle" data-type="red" id="r7" style="left: 28%; top:50% ;"></div>
-        <div class="red-circle" data-type="red" id="r8" style="left:17%; top: 61%;"></div>
+        <div class="red-circle" data-type="red" id="r8" style="left:17%; top: 62%;"></div>
 
         <!-- 8 Gray Rectangle Points -->
         <div class="gray-rectangle" data-type="gray" id="g1" style="left: 79%; top: 36%;"></div>
@@ -502,6 +510,8 @@ function GAMimic() {
 	          if(selectedValue==1)
 	        	  {
 	        	  	WallDesign();
+	        	  	mainJson.selectedValueMainPage="Along with the wall";
+					console.log(mainJson);
 //	        	  	 $("#CalculateDiv,#ValueTable").fadeIn();
 //	        	     $("#CalculateDiv,#ValueTable").fadeIn("slow");
 //	        	     $("#CalculateDiv,#ValueTable").fadeIn(5000);
@@ -510,6 +520,8 @@ function GAMimic() {
 	        	  }
 	          else if(selectedValue==2){
 	        	  DirectDesign();
+	        		mainJson.selectedValueMainPage="Direct connection to the junction box";
+					console.log(mainJson);
 //	        	  $("#CalculateDiv,#ValueTable").fadeIn();
 //	        	    $("#CalculateDiv,#ValueTable").fadeIn("slow");
 //	        	    $("#CalculateDiv,#ValueTable").fadeIn(5000);
@@ -598,7 +610,7 @@ function GAMimic() {
                   
 
                     // Create first horizontal line
-                    let line1 = $("<div class='line'></div>").appendTo(".image-container");
+                    let line1 = $("<div class='line' style='background-color:black;'></div>").appendTo(".image-container");
                     line1.css({
                         left: start.x + "px",
                         top: adjustedStartY + "px", // Adjusted for overlap
@@ -615,7 +627,7 @@ function GAMimic() {
                         let verticalEndY = adjustedEndY;
 
                         // Create second vertical line
-                        let line2 = $("<div class='line'></div>").appendTo(".image-container");
+                        let line2 = $("<div class='line' style='background-color:black;'></div>").appendTo(".image-container");
                         line2.css({
                             left: end.x + "px",
                             top: verticalStartY + "px",
@@ -635,14 +647,14 @@ function GAMimic() {
                             <table class="table table-bordered">
                                 <thead>
                                     <tr class="table-primary">
-                                        <th scope="col">Component (Start Point)</th>
-                                        <th scope="col">Junction Box (End Point)</th>
+                                        <th scope="col">Component (Source)</th>
+                                        <th scope="col">Junction Box (Destination)</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td style="font-size:15px;font-weight: bold;">(X=${start.x * 10},Y=750,Z=${parseInt(start.y * 10)})</td>
-                                        <td style="font-size:15px;font-weight: bold;">(X=${end.x * 10},Y=750,Z=${parseInt(end.y * 10)})</td>
+                                        <td style="font-size:15px;font-weight: bold;">(X=${parseInt(start.x * 10)},Y=750,Z=${parseInt(start.y * 10)})</td>
+                                        <td style="font-size:15px;font-weight: bold;">(X=${parseInt(end.x * 10)},Y=750,Z=${parseInt(end.y * 10)})</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -734,7 +746,7 @@ function GAMimic() {
                 	    let angle = Math.atan2(dy, dx) * (180 / Math.PI);
 
                 	    // Create Line
-                	    let line = $("<div class='line'></div>").appendTo(".image-container");
+                	    let line = $("<div class='line' style='background-color:black;'></div>").appendTo(".image-container");
                 	    line.css({
                 	        left: start.x + "px",
                 	        top: start.y + "px",
@@ -750,8 +762,8 @@ function GAMimic() {
                 	    let label = $("<div class='line-label'></div>").appendTo(".image-container");
                 	    label.text("Cable - "+(cnt1++));
                 	    label.css({
-                	        left: midX + "px",
-                	        top: midY + "px"
+                	        left: start.x + "px",
+                	        top: start.y + "px"
                 	    });
 
                 	    // Update the attribute every time a line is drawn
@@ -767,13 +779,13 @@ function GAMimic() {
                 	        <thead>
                 	            <tr class="table-primary">
                 	                <th scope="col">Component (Start Point)</th>
-                	                <th scope="col">Junction Box (End Point)</th>
+                	                <th scope="col">Junction Box (Destination)</th>
                 	            </tr>
                 	        </thead>
                 	        <tbody>
                 	            <tr>
-                	                <td style="font-size:15px;font-weight: bold;">(X=${start.x * 10},Y=750,Z=${parseInt(start.y * 10)})</td>
-                	                <td style="font-size:15px;font-weight: bold;">(X=${end.x * 10},Y=750,Z=${parseInt(end.y * 10)})</td>
+                	                <td style="font-size:15px;font-weight: bold;">(X=${parseInt(start.x * 10)},Y=750,Z=${parseInt(start.y * 10)})</td>
+                	                <td style="font-size:15px;font-weight: bold;">(X=${parseInt(end.x * 10)},Y=750,Z=${parseInt(end.y * 10)})</td>
                 	            </tr>
                 	        </tbody>
                 	    </table>`;
