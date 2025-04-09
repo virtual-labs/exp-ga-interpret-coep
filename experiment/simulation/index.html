@@ -127,7 +127,7 @@
 <!--                     <h5 class="text-center">Pre_Commissioning</h5> -->
               			<img src="images/demo1.png" class="img_fluid">
 
-                    <button class="btn btn-success " id="btnStart" style="float:right;margin: 10px;background-color:teal;"  >START</button>
+                    <button class="btn btn-success " id="btnStart" style="float:right;margin: 10px;background-color:teal;"  >CLICK HERE TO START</button>
 <!--                		   <button class="btn btn-success " id="btnStart1" style="float:right;margin: 10px;background-color:teal;"  >START AIR FILTER</button> -->
                
                 </div>
@@ -186,16 +186,6 @@ Copyrights &copy; COEPTECH - Virtual Labs
 <script src="src/stdJson.js"></script>
 <!--<script src="src/questionJson.js"></script>-->
 
-<!-- Plant 2- BoilerHeatExchanger -->
-
-<!-- <script src="src/BoilerHeatExchangerGraph.js"></script> -->
-<!-- <script src="src/BoilerHeatExchangerSquActivities.js"></script> -->
-<!-- <script src="src/subActivties1.js"></script> -->
-<!-- <script src="src/subActivties2.js"></script> -->
-<!-- <script src="src/subActivties3.js"></script> -->
-<!-- <script src="src/subActivties4.js"></script> -->
-<!-- <!-- <script src="src/faultActivity.js"></script> --> 
-<!-- <script src="src/mainActivites.js"></script> -->
 <script src="src/mainPage.js"></script>
 <script src="src/mainPageAirFilter.js"></script>
 <script src="src/result.js"></script>
@@ -237,7 +227,7 @@ $("#coepLogo").click(function(evt) {
 	 $('#coepLogo').off('click');
 });
 $("#btnStart").click(function(evt) {
-	
+// 	result();
 	GAMimic();
 });
 
@@ -249,7 +239,7 @@ $('#report').on('click', function() {
 		        $("canvas").css("display","none");
 		        // Optionally save the screenshot as an image
 		        var link = document.createElement('a');
-		        link.download = 'BoilerHeatExchanger_report.png';
+		        link.download = 'GA-drawing_report.png';
 		        link.href = canvas.toDataURL();
 		        link.click();
 		    });
