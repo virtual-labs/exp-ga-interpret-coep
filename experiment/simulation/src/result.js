@@ -17,7 +17,7 @@ function result(){
               			<img src="images/junctionpoint.png" class="img_fluid">
 			</div>
     <p style="margin-top:20px;"><strong >Route of Cable: </strong> ${mainJson.selectedValueMainPage}</p>
-    <div class="highlight-box"><strong >Total Required Cable : </strong><b style="color:blue;"> ${mainJson.mainPageTotal}</b> meter</div>
+    <div class="highlight-box"><strong >Total Required Cable length : </strong><b style="color:blue;"> ${mainJson.mainPageTotal}</b> meter</div>
   </div>
 </div>
 <div class="col-md-6">
@@ -28,8 +28,8 @@ function result(){
 <!--                     <h5 class="text-center">Pre_Commissioning</h5> -->
               			<img src="images/airfilter.jpg" class="img_fluid">
 			</div>
-    <p style="margin-top:20px;"><strong >Route of Cable: </strong> ${mainJson.selectedValueMainPage1}</p>
-    <div class="highlight-box"><strong>Total Required Cable : </strong><b style="color:blue;">${mainJson.mainPageTotal1}</b> meter</div>
+    <p style="margin-top:20px;"><strong >Route of Tube: </strong> ${mainJson.selectedValueMainPage1}</p>
+    <div class="highlight-box"><strong>Total Required Tube length : </strong><b style="color:blue;">${mainJson.mainPageTotal1}</b> meter</div>
   </div>
 </div>
 </div>
