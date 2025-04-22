@@ -28,7 +28,7 @@ function GAMimic() {
 <!-- 		        Modal Header -->
 			        <div class="modal-header" style="    background-color: teal;color: #fff;">
 		          <h4 class="modal-title" >Message Box</h4>
-			         <button type="button" class="close" data-dismiss="modal">&times;</button>
+			         <button type="button" class="close modalOptClose" data-dismiss="modal">&times;</button>
 			        </div>
 <!-- 		        Modal body -->
 			        <div class="modal-body" id="ModalBody">
@@ -37,7 +37,7 @@ function GAMimic() {
 <!-- 			        Modal footer -->
 			        <div class="modal-footer">
 			          
-		             <button type="button" class="btn btn-danger " data-dismiss="modal" >Ok</button> 
+		             <button type="button" class="btn btn-danger modalOptClose" data-dismiss="modal" >Ok</button> 
 			        </div>
 			      </div>
 			    </div>
@@ -145,6 +145,11 @@ function GAMimic() {
 	
 	`;
 	$("#mainDiv").html(htm);
+	
+	$(".modalOptClose").click(function(){
+		$("#exampleModal").modal("hide");
+	})
+	
 	$("#next").click(function(evt) {
 		
 		GAMimic1();
