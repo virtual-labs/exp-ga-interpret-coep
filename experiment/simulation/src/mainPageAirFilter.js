@@ -1,9 +1,9 @@
 
 function GAMimic1() {
-	 var timerMasterJson={};
-	 var conCnt=0;
-	 var calCnt=0;
-	 var resultJson={};
+	 
+//	 var conCnt=0;
+	 var calCnt1=0;
+	var calCntTotal1=0;
 	let masterJson={};
 	let arrayJson=[];
 	var selectedValue=0;
@@ -11,6 +11,10 @@ function GAMimic1() {
 	  var image ;
 	  var cnt=1;
 	  var cnt1=1;
+	  timerMasterJson.junctionBox=$("#counter").text();
+		console.log(timerMasterJson);
+		seconds = 0;
+		  updateCounter();
 	  var zPos; // Z is constant as we are in a 2D plane
 	$("#counter").prop("hidden",false);
 	$("#Header").html("<center>PNEUMATIC TUBING WITH AIR HEADER</center>");
@@ -151,14 +155,15 @@ function GAMimic1() {
 	})
 	
 	$('#result').click(function(){
-		resultJson.calCnt=calCnt;
-		resultJson.conCnt=conCnt;
+		resultJson.calCnt1=calCnt1;
+		resultJson.calCntTotal1=calCntTotal1;
+		console.log(resultJson);
 		result();
 	
 	});
 	var id=0;
 	  $('#totalSubmitLength').click(function(){
-		  calCnt++;
+		  calCnt1++;
 		  $("#ModalBody").css("color", "brown");
 		  $("#exampleModal").modal("show");
 		   
@@ -244,7 +249,7 @@ function GAMimic1() {
 	  });
 	  var id=0;
 	  $('#submitLength').click(function(){
-		  calCnt++;
+		  calCntTotal1++;
 		  $("#ModalBody").css("color", "brown");
 		  $("#exampleModal").modal("show");
 		   
@@ -318,13 +323,18 @@ function GAMimic1() {
 	        			 addJsonCreateTable(userLength);
 						id=0;
 						if(cnt==7){
-							$("#exampleModal").modal("hide");
 							let totalMeterTemp=parseFloat(totalCorrectLength/1000);
 							let totalMeter = Math.ceil(totalMeterTemp);
 							console.log(totalMeter); 
 							$("#ModalBody").css("color", "brown");
-							$("#ModalBody").html(`Calculate the total length of the tube required for this project.`);
 							$("#selectDiv").prop("hidden",true);
+							
+							$("#ModalBody").html(`Calculate the total length of the tube required for this project.`);
+//							$("#coordinateDiv").prop("hidden",true);
+							$("#coordinateDiv").html(`<center><div class="alert alert-success">
+									  Total Cable Length = <strong>${totalCorrectLength}mm</strong> <br>
+									  The additional tube, beyond the measured one, is required for connection to the air header = <strong>${totalMeter}Meter</strong> <br>
+									</div></center>`);
 							$("#TotalLengthDiv").prop("hidden",false);
 							
 						}	
@@ -369,6 +379,7 @@ function GAMimic1() {
 							$("#selectDiv").prop("hidden",true);
 							
 							$("#ModalBody").html(`Calculate the total length of the tube required for this project.`);
+							$("#coordinateDiv").prop("hidden",true);
 							$("#coordinateDiv").html(`<center><div class="alert alert-success">
 									  Total Cable Length = <strong>${totalCorrectLength}mm</strong> <br>
 									  The additional tube, beyond the measured one, is required for connection to the air header = <strong>${totalMeter}Meter</strong> <br>
@@ -536,50 +547,65 @@ function GAMimic1() {
             });
             
             function WallDesign() {
-                let selectedPoint = null;
-                let usedPoints = [];
+            	let selectedPoint = null;
+            	let usedPoints = [];
 
-                $(".red-circle, .gray-rectangle").click(function (e) {
-                    e.stopPropagation();
-                    let element = $(this);
-                    let point = {
-                        x: element.position().left + 10, 
-                        y: element.position().top + 10,
-                        type: element.data("type"),
-                        element: element
-                    };
+            	$(".red-circle, .gray-rectangle").click(function (e) {
+            	    e.stopPropagation();
+            	    let element = $(this);
 
-                    if (usedPoints.includes(element[0])) {
-                        alert("This point is already connected!");
-                        conCnt++;
-                        return;
-                    }
+            	    let point = {
+            	        x: element.position().left + 10,
+            	        y: element.position().top + 10,
+            	        type: element.hasClass("red-circle") ? "circle" : "rectangle",
+            	        element: element
+            	    };
 
-                    if (!selectedPoint) {
-                        selectedPoint = point;
-                    } else {
-                    	
-                    	
-                    	 let id1 = selectedPoint.element.attr("id");
-                         let id2 = point.element.attr("id");
+            	    // Prevent clicking on #r7 or #r8 as either source or destination
+            	    if (element.attr("id") === "r7" || element.attr("id") === "r8") {
+            	        toastr.error("Since this is electronic instrument, air supply is not required.");
+            	        return;
+            	    }
 
-                        console.log("kfgkjgkj");
+            	    if (selectedPoint) {
+            	        let id1 = selectedPoint.element.attr("id");
+            	        let id2 = point.element.attr("id");
 
-                        if ((id1 === "r7" || id1 === "r8") && id2.startsWith("g") ||
-                                (id2 === "r7" || id2 === "r8") && id1.startsWith("g")) {
-                                toastr.error("Since this is electronic instrument air supply is not required.");
-                                selectedPoint = null;
-                                return;
-                            }
+            	        if (
+            	            ((id1 === "r7" || id1 === "r8") && id2 && id2.startsWith("g")) ||
+            	            ((id2 === "r7" || id2 === "r8") && id1 && id1.startsWith("g"))
+            	        ) {
+            	            toastr.error("Since this is electronic instrument, air supply is not required.");
+            	            selectedPoint = null;
+            	            return;
+            	        }
+            	    }
 
-                        if (selectedPoint.type !== point.type) {
-                            drawSquareLine(selectedPoint, point);
-                            usedPoints.push(selectedPoint.element[0], point.element[0]);
-                        }
-                        selectedPoint = null;
-                    }
-                });
+            	    console.log("Clicked element type: " + point.type);
+            	    console.log("usedPoints: ", usedPoints);
 
+            	    if (usedPoints.includes(element[0])) {
+            	        alert("This point is already connected!");
+            	        return;
+            	    }
+
+            	    if (!selectedPoint) {
+            	        selectedPoint = point;
+            	    } else {
+            	        if (!element.hasClass("gray-rectangle")) {
+            	            alert("End point must be a gray rectangle.");
+            	            selectedPoint = null;
+            	            return;
+            	        }
+
+            	        if (!usedPoints.includes(point.element[0]) && !usedPoints.includes(selectedPoint.element[0])) {
+            	            drawSquareLine(selectedPoint, point);
+            	            usedPoints.push(selectedPoint.element[0], point.element[0]);
+            	        }
+
+            	        selectedPoint = null;
+            	    }
+            	});
                 function drawSquareLine(start, end) {
                     console.log("end.x " + end.x);
                     console.log("end.y " + end.y);
@@ -709,7 +735,7 @@ function GAMimic1() {
                      // Check if this point is already connected
                      if (usedPoints.includes(element[0])) {
                          alert("This point is already connected!");
-                         conCnt++;
+//                         conCnt++;
                          return;
                      }
 

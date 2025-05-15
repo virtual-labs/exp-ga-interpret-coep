@@ -1,6 +1,7 @@
  var timerMasterJson={};
  var conCnt=0;
  var calCnt=0;
+ var calCntTotal=0;
  var resultJson={};
 let masterJson={};
 let mainJson={};
@@ -151,16 +152,18 @@ function GAMimic() {
 	})
 	
 	$("#next").click(function(evt) {
-		
+		resultJson.calCnt=calCnt;
+		resultJson.calCntTotal=calCntTotal;
+		console.log(resultJson);
 		GAMimic1();
 	});
 	
-	$('#result').click(function(){
-		resultJson.calCnt=calCnt;
-		resultJson.conCnt=conCnt;
-		result();
-	
-	});
+//	$('#result').click(function(){
+//		resultJson.calCnt=calCnt;
+//		resultJson.conCnt=conCnt;
+//		result();
+//	
+//	});
 	  var id=0;
 	  $('#totalSubmitLength').click(function(){
 		  calCnt++;
@@ -253,8 +256,8 @@ function GAMimic() {
 	  });
 	  var id=0;
 	  $('#submitLength').click(function(){
-		  console.log("cnt "+cnt);
-		  calCnt++;
+		  
+		  calCntTotal++;
 		  $("#ModalBody").css("color", "brown");
 		  $("#exampleModal").modal("show");
 		   
@@ -557,103 +560,107 @@ function GAMimic() {
                 $('#zPos').text(zPos);
             });
             
-            function WallDesign(){
-            	
-                    let selectedPoint = null;
-                    let usedPoints = [];
-                  
-//                    zPos = 0; // Z is constant as we are in a 2D plane
-                    $(".red-circle, .gray-rectangle").click(function (e) {
-                        e.stopPropagation();
-                        let element = $(this);
-                        let point = {
-                            x: element.position().left + 10, 
-                            y: element.position().top + 10,
-                            type: element.data("type"),
-                            element: element
-                        };
+            function WallDesign() {
+                let selectedPoint = null;
+                let usedPoints = [];
 
-                        if (usedPoints.includes(element[0])) {
-                            alert("This point is already connected!");
-                            conCnt++;
-                            return;
-                        }
+                $(".red-circle, .gray-rectangle").click(function (e) {
+                	 if (!$("#CalculateDiv").prop("hidden")) {
+//                	        console.log("Click prevented: calculation in progress.");
+                	        $(".red-circle, .gray-rectangle").css("pointer-events", "none");
+                          toastr.error("Prevent click until calculation is complete");
+                	        return;
+                	    }
 
-                        if (!selectedPoint) {
-                            selectedPoint = point;
-                        } else {
-                            if (selectedPoint.type !== point.type) {
-                                drawSquareLine(selectedPoint, point);
-                                usedPoints.push(selectedPoint.element[0], point.element[0]);
-                            }
-                            selectedPoint = null;
-                        }
-                    });
+                	 e.stopPropagation();
+                	    let element = $(this);
+                	    let point = {
+                	        x: element.position().left + 10,
+                	        y: element.position().top + 10,
+                	        type: element.hasClass("red-circle") ? "circle" : "rectangle",
+                	        element: element
+                	    };
 
-                    function drawSquareLine(start, end) {
-                    	console.log("end.x " + end.x);
-                    console.log("end.y " + end.y);
+                	    console.log("Clicked element type: " + point.type);
+                	    console.log("usedPoints: ", usedPoints);
 
+                	    if (usedPoints.includes(element[0])) {
+                	    	alert("This point is already connected!");
+                	        return;
+                	    }
+
+                	    if (!selectedPoint) {
+                	        // Only allow start point as red-circle
+                	        if (!element.hasClass("red-circle")) {
+                	        	alert("First, click on the field instrument (red circle), and then click on the junction box (gray rectangle).");
+                	            return;
+                	        }
+                	        selectedPoint = point;
+                	    } else {
+                	        // Only allow end point as gray-rectangle
+                	        if (!element.hasClass("gray-rectangle")) {
+                	        	alert("The destination is always the junction box (gray rectangle).");
+                	            selectedPoint = null;
+                	            return;
+                	        }
+
+                	        // Draw line if not already used
+                	        if (!usedPoints.includes(point.element[0]) && !usedPoints.includes(selectedPoint.element[0])) {
+                	            drawSquareLine(selectedPoint, point);
+                	            usedPoints.push(selectedPoint.element[0], point.element[0]);
+                	        }
+                	        selectedPoint = null;
+                	    }
+                });
+
+                function drawSquareLine(start, end) {
                     let dx = end.x - start.x;
                     let dy = end.y - start.y;
-
                     let lengthX = Math.abs(dx);
                     let lengthY = Math.abs(dy);
 
-                    // Check if there's an existing line at the same position
+                    // Avoid overlapping lines
                     let existingLines = $(".line").filter(function () {
                         let left = parseInt($(this).css("left"));
                         let top = parseInt($(this).css("top"));
                         return left === start.x && top === start.y;
                     });
 
-                    // If a line exists, offset new line slightly
-                    let offset = existingLines.length * 5; // Each new line is shifted by 5px
+                    let offset = existingLines.length * 5;
                     let adjustedStartY = start.y + offset;
                     let adjustedEndY = end.y + offset;
-                    
-                  
 
-                    // Create first horizontal line
+                    // First horizontal line
                     let line1 = $("<div class='line' style='background-color:black;'></div>").appendTo(".image-container");
                     line1.css({
                         left: start.x + "px",
-                        top: adjustedStartY + "px", // Adjusted for overlap
+                        top: adjustedStartY + "px",
                         width: "0px",
                         height: "2px"
                     });
-                    
-                    let midX = (start.x + end.x) / 2;
-            	    let midY = (start.y + end.y) / 2;
-            	    
-                    // Animate horizontal line
-                    line1.animate({ width: lengthX + "px" }, 500, function () {
-                        let verticalStartY = adjustedStartY;
-                        let verticalEndY = adjustedEndY;
 
-                        // Create second vertical line
+                    // Animate horizontal
+                    line1.animate({ width: lengthX + "px" }, 500, function () {
                         let line2 = $("<div class='line' style='background-color:black;'></div>").appendTo(".image-container");
                         line2.css({
                             left: end.x + "px",
-                            top: verticalStartY + "px",
+                            top: adjustedStartY + "px",
                             width: "2px",
                             height: "0px"
                         });
-                        
 
-                        $(".red-circle, .gray-rectangle").css("pointer-events", "none");
-                        toastr.error("Prevent click until calculation is complete");
-                        // Animate vertical line
-                        line2.animate({ height: lengthY + "px", top: Math.min(verticalStartY, verticalEndY) + "px" }, 500, function () {
+//                        $(".red-circle, .gray-rectangle").css("pointer-events", "none");
+//                        toastr.error("Prevent click until calculation is complete");
+
+                        line2.animate({ height: lengthY + "px", top: Math.min(adjustedStartY, adjustedEndY) + "px" }, 500, function () {
                             $("#submitLength").attr("data-correct-length", parseInt(lengthX + lengthY) * 10);
-                            
-                            
-                            var htm = `
+
+                            let htm = `
                             <table class="table table-bordered">
                                 <thead>
                                     <tr class="table-primary">
-                                        <th scope="col">Component (Source)</th>
-                                        <th scope="col">Junction Box (Destination)</th>
+                                        <th>Component (Source)</th>
+                                        <th>Junction Box (Destination)</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -666,12 +673,10 @@ function GAMimic() {
                             `;
                             $("#ValueTable").html(htm);
                             $("#CalculateDiv,#ValueTable").prop("hidden", false);
-                            
+                            $(".red-circle, .gray-rectangle").css("pointer-events", "auto");
                         });
-                        // ✅ Label placement logic here
-                        let midX = start.x + dx / 2;
-                        let midY = adjustedStartY + dy / 2;
 
+                        // Label
                         let label = $("<div class='line-label'></div>").appendTo(".image-container");
                         label.text("Cable - " + (cnt1++));
                         label.css({
@@ -684,31 +689,30 @@ function GAMimic() {
                             borderRadius: "4px",
                             color: "#000",
                             left: start.x + "px",
-                            top: adjustedStartY + "px", 
+                            top: adjustedStartY + "px",
                             zIndex: 10
                         });
                     });
-}
-                    image = $('#ActualName,.red-circle, .gray-rectangle,.line,.line-label');
-                    image.on('mousemove', function(event) {
-                        var offset = image.offset();
-                        var x = parseInt((event.pageX - offset.left)*10);
-                        var y =  parseInt((event.pageY - offset.top)*10);
-                        var z =parseInt((event.pageY - offset.top)*10);
-                        $('#xPos').text(x);
-                        $('#yPos').text(750);
-                        $('#zPos').text(y);
-                    });
+                }
 
-                    image.on('mouseleave', function() {
-                        // Reset to 0 when the mouse leaves the image
-                        $('#xPos').text(0);
-                        $('#yPos').text(0);
-                        $('#zPos').text(zPos);
-                    });
-                    
-            	
+                // Mouse tracking
+                let image = $('#ActualName, .red-circle, .gray-rectangle, .line, .line-label');
+                image.on('mousemove', function (event) {
+                    let offset = image.offset();
+                    let x = parseInt((event.pageX - offset.left) * 10);
+                    let y = parseInt((event.pageY - offset.top) * 10);
+                    $('#xPos').text(x);
+                    $('#yPos').text(750);
+                    $('#zPos').text(y);
+                });
+
+                image.on('mouseleave', function () {
+                    $('#xPos').text(0);
+                    $('#yPos').text(0);
+                    $('#zPos').text(0);
+                });
             }
+
             function DirectDesign(){
             	 let selectedPoint = null;
                  let usedPoints = []; // Store used points to prevent reusing them
