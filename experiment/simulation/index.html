@@ -1,7 +1,7 @@
 
 <html>
 <head>
-<title>GA_DRAWING</title>
+<title>GA DRAWING</title>
 
 </head>
  <meta charset="utf-8">
@@ -68,7 +68,7 @@
 <!-- 		 <button type="button" id="tagDetails" class="btn btn-danger btn1" data-toggle="modal" data-target="#proStr"><b>Tag Details </b></button> -->
 <!-- 	     <button type="button" id="simDemo" class="btn btn-danger btn1" data-toggle="modal" data-target="#proStr"><b>Problem statement</b> </button> -->
 		    <button type="button" id="procedure" class="btn btn-danger btn1 button1" data-toggle="modal" data-target="#proStr" hidden><b>Procedure </b></button>
-		    <button type="button" class="btn btn-danger btn1 button1"  id="report" style="margin-top:10px;"  hidden>Download report </button> 
+		    <button type="button" class="btn btn-danger btn1 button1"  id="report" style="margin-top:10px;background-color: teal;"  hidden>Download report </button> 
 	     </div>
 	     
 	   
@@ -114,7 +114,7 @@
 <!--             <h4 class="text-center">FAULT FINDING</h4> -->
                 <span class="fw-bold" style="    font-family: emoji;
     font-size: 18px;
-    word-spacing: 1px;">You are appointed as “Commissioning Engineer” by your firm and assigned you a job of 
+    word-spacing: 1px;">You are appointed as 'Commissioning Engineer' by your firm and assigned you a job of 
     commissioning of a Boiler and Heat Exchanger Plant. List the documents you will collect 
     for the starting of commissioning activity.
              </span>
@@ -231,19 +231,7 @@ $("#btnStart").click(function(evt) {
 	GAMimic();
 });
 
-$('#report').on('click', function() {
-<!--			$('#report').prop("hidden",true);-->
-		    html2canvas(document.querySelector("#mainDiv")).then(canvas => {
-		        // Append the screenshot canvas to the body
-		        document.body.appendChild(canvas);
-		        $("canvas").css("display","none");
-		        // Optionally save the screenshot as an image
-		        var link = document.createElement('a');
-		        link.download = 'GA-drawing_report.png';
-		        link.href = canvas.toDataURL();
-		        link.click();
-		    });
-		});
+
 
 </script>
 <script >
