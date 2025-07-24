@@ -1,6 +1,6 @@
 ## Aim 
 
-Interpret GA drawing of the process plant under consideration
+Interpret GA (General Arrangement) drawing of the process plant under consideration
 
 ## Objectives 
  
