@@ -1,0 +1,1121 @@
+
+/home/runner/work/exp-ga-interpret-coep/exp-ga-interpret-coep/experiment/simulation/js/bootstrap.min.js
+  6:99     warning  't' is defined but never used                                              no-unused-vars
+  6:121    warning  'jQuery' is not defined                                                    no-undef
+  6:1063   warning  'jQuery' is not defined                                                    no-undef
+  6:2025   warning  'jQuery' is not defined                                                    no-undef
+  6:3973   warning  'jQuery' is not defined                                                    no-undef
+  6:8061   warning  'jQuery' is not defined                                                    no-undef
+  6:11443  warning  'jQuery' is not defined                                                    no-undef
+  6:13818  warning  'jQuery' is not defined                                                    no-undef
+  6:20192  warning  'jQuery' is not defined                                                    no-undef
+  6:23482  warning  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+  6:31057  warning  'jQuery' is not defined                                                    no-undef
+  6:32796  warning  'jQuery' is not defined                                                    no-undef
+  6:35218  warning  'jQuery' is not defined                                                    no-undef
+  6:37052  warning  'jQuery' is not defined                                                    no-undef
+  6:39546  warning  'jQuery' is not defined                                                    no-undef
+
+/home/runner/work/exp-ga-interpret-coep/exp-ga-interpret-coep/experiment/simulation/js/chart.js
+      8:64   warning  'module' is not defined                                                    no-undef
+      8:115  warning  'require' is not defined                                                   no-undef
+      8:145  warning  Empty block statement                                                      no-empty
+      9:33   warning  'define' is not defined                                                    no-undef
+      9:46   warning  'define' is not defined                                                    no-undef
+      9:157  warning  Empty block statement                                                      no-empty
+     13:27   warning  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+    184:16   warning  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+    209:14   warning  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+    366:17   warning  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+   1044:5    warning  'conversions_1' is assigned a value but never used                         no-unused-vars
+   1045:5    warning  'conversions_2' is assigned a value but never used                         no-unused-vars
+   1046:5    warning  'conversions_3' is assigned a value but never used                         no-unused-vars
+   1047:5    warning  'conversions_4' is assigned a value but never used                         no-unused-vars
+   1048:5    warning  'conversions_5' is assigned a value but never used                         no-unused-vars
+   1049:5    warning  'conversions_6' is assigned a value but never used                         no-unused-vars
+   1050:5    warning  'conversions_7' is assigned a value but never used                         no-unused-vars
+   1051:5    warning  'conversions_8' is assigned a value but never used                         no-unused-vars
+   1052:5    warning  'conversions_9' is assigned a value but never used                         no-unused-vars
+   1053:5    warning  'conversions_10' is assigned a value but never used                        no-unused-vars
+   1054:5    warning  'conversions_11' is assigned a value but never used                        no-unused-vars
+   1055:5    warning  'conversions_12' is assigned a value but never used                        no-unused-vars
+   1056:5    warning  'conversions_13' is assigned a value but never used                        no-unused-vars
+   1057:5    warning  'conversions_14' is assigned a value but never used                        no-unused-vars
+   1058:5    warning  'conversions_15' is assigned a value but never used                        no-unused-vars
+   1410:90   warning  Unnecessary escape character: \.                                           no-useless-escape
+   1411:35   warning  Unnecessary escape character: \.                                           no-useless-escape
+   1411:40   warning  Unnecessary escape character: \%                                           no-useless-escape
+   1411:58   warning  Unnecessary escape character: \.                                           no-useless-escape
+   1411:63   warning  Unnecessary escape character: \%                                           no-useless-escape
+   1411:81   warning  Unnecessary escape character: \.                                           no-useless-escape
+   1411:86   warning  Unnecessary escape character: \%                                           no-useless-escape
+   1411:107  warning  Unnecessary escape character: \.                                           no-useless-escape
+   1428:13   warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+   1431:16   warning  'i' is already defined                                                     no-redeclare
+   1438:13   warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+   1439:16   warning  'i' is already defined                                                     no-redeclare
+   1444:13   warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+   1445:16   warning  'i' is already defined                                                     no-redeclare
+   1450:13   warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+   1460:13   warning  'i' is already defined                                                     no-redeclare
+   1477:60   warning  Unnecessary escape character: \.                                           no-useless-escape
+   1477:82   warning  Unnecessary escape character: \.                                           no-useless-escape
+   1477:107  warning  Unnecessary escape character: \.                                           no-useless-escape
+   1493:58   warning  Unnecessary escape character: \.                                           no-useless-escape
+   1493:80   warning  Unnecessary escape character: \.                                           no-useless-escape
+   1493:105  warning  Unnecessary escape character: \.                                           no-useless-escape
+   1520:13   warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+   1523:13   warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+   1530:8    warning  'a' is already defined                                                     no-redeclare
+   1648:14   warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+   1650:14   warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+   1960:15   warning  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+   2322:22   warning  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+   2394:48   warning  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+   3282:13   warning  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+   3292:14   warning  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+   7265:16   warning  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+   8093:28   warning  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+   8097:24   warning  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+   8101:19   warning  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+  10880:14   warning  'CanvasGradient' is already defined as a built-in global variable          no-redeclare
+  10889:13   warning  'CanvasPattern' is already defined as a built-in global variable           no-redeclare
+  16037:14   warning  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+
+/home/runner/work/exp-ga-interpret-coep/exp-ga-interpret-coep/experiment/simulation/js/jquery.js
+  2:58     warning  'module' is not defined                                                    no-undef
+  2:73     warning  'module' is not defined                                                    no-undef
+  2:6324   warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:6580   warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:7011   warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:7270   warning  Empty block statement                                                      no-empty
+  2:7839   warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:9709   warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:11311  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:11887  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:11925  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:12343  warning  Empty block statement                                                      no-empty
+  2:12906  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:13218  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:15046  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:15317  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:15517  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:15893  warning  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+  2:16598  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:18982  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:19073  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:19133  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:20435  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:21049  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:21160  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:23420  warning  Unnecessary escape character: \[                                           no-useless-escape
+  2:23422  warning  Unnecessary escape character: \.                                           no-useless-escape
+  2:30761  warning  Empty block statement                                                      no-empty
+  2:31981  warning  Empty block statement                                                      no-empty
+  3:7811   warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  3:7951   warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  3:8441   warning  Empty block statement                                                      no-empty
+  3:11852  warning  Empty block statement                                                      no-empty
+  3:14493  warning  Empty block statement                                                      no-empty
+  3:24051  warning  Empty block statement                                                      no-empty
+  3:26100  warning  Move function declaration to function body root                            no-inner-declarations
+  3:30714  warning  Empty block statement                                                      no-empty
+  4:2546   warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  4:5062   warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  4:11701  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  4:13447  warning  Empty block statement                                                      no-empty
+  4:14747  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  4:14827  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  4:15164  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  4:15244  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  4:15659  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  4:15915  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  4:16492  warning  Unnecessary escape character: \/                                           no-useless-escape
+  4:17365  warning  Unnecessary escape character: \/                                           no-useless-escape
+  4:17377  warning  Unnecessary escape character: \/                                           no-useless-escape
+  4:17610  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  4:20109  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  4:22009  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  4:27128  warning  Empty block statement                                                      no-empty
+  4:27205  warning  Empty block statement                                                      no-empty
+  5:812    warning  'define' is not defined                                                    no-undef
+  5:824    warning  'define' is not defined                                                    no-undef
+
+/home/runner/work/exp-ga-interpret-coep/exp-ga-interpret-coep/experiment/simulation/js/jquery.min.js
+  2:71     warning  'module' is not defined                                                    no-undef
+  2:86     warning  'module' is not defined                                                    no-undef
+  2:5642   warning  Unexpected control character(s) in regular expression: \x1f, \x1f          no-control-regex
+  2:6125   warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:6349   warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:6857   warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:7627   warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:9992   warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:10302  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:12343  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:12911  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:12949  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:13932  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:14244  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:16072  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:16343  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:16541  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:16915  warning  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+  2:17605  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:19425  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:19525  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:19585  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:19769  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:20938  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:22210  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:22321  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:24487  warning  Unnecessary escape character: \/                                           no-useless-escape
+  2:34099  warning  Empty block statement                                                      no-empty
+  2:37844  warning  Unnecessary escape character: \/                                           no-useless-escape
+  2:39493  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:39609  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:39807  warning  Empty block statement                                                      no-empty
+  2:49360  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:50920  warning  Empty block statement                                                      no-empty
+  2:59547  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:60716  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:66348  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:69224  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:73102  warning  Empty block statement                                                      no-empty
+  2:74715  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:76309  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:77089  warning  'r.href' is assigned to itself                                             no-self-assign
+  2:81927  warning  Empty block statement                                                      no-empty
+  2:85043  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:89495  warning  'define' is not defined                                                    no-undef
+  2:89507  warning  'define' is not defined                                                    no-undef
+
+/home/runner/work/exp-ga-interpret-coep/exp-ga-interpret-coep/experiment/simulation/js/raphael.js
+  5800:60  error  Parsing error: Deleting local variable in strict mode
+
+/home/runner/work/exp-ga-interpret-coep/exp-ga-interpret-coep/experiment/simulation/js/raphael.min.js
+  1:66     warning  'module' is not defined                                                                                                                          no-undef
+  1:112    warning  'define' is not defined                                                                                                                          no-undef
+  1:123    warning  'define' is not defined                                                                                                                          no-undef
+  1:161    warning  'exports' is not defined                                                                                                                         no-undef
+  1:1566   warning  'DocumentTouch' is not defined                                                                                                                   no-undef
+  1:2001   warning  Unnecessary escape character: \.                                                                                                                 no-useless-escape
+  1:2017   warning  Unnecessary escape character: \.                                                                                                                 no-useless-escape
+  1:2033   warning  Unnecessary escape character: \.                                                                                                                 no-useless-escape
+  1:2052   warning  Unnecessary escape character: \.                                                                                                                 no-useless-escape
+  1:2081   warning  Unnecessary escape character: \.                                                                                                                 no-useless-escape
+  1:2110   warning  Unnecessary escape character: \.                                                                                                                 no-useless-escape
+  1:2126   warning  Unnecessary escape character: \.                                                                                                                 no-useless-escape
+  1:2145   warning  Unnecessary escape character: \.                                                                                                                 no-useless-escape
+  1:2174   warning  Unnecessary escape character: \.                                                                                                                 no-useless-escape
+  1:2203   warning  Unnecessary escape character: \.                                                                                                                 no-useless-escape
+  1:2219   warning  Unnecessary escape character: \.                                                                                                                 no-useless-escape
+  1:2238   warning  Unnecessary escape character: \.                                                                                                                 no-useless-escape
+  1:2346   warning  Unnecessary escape character: \)                                                                                                                 no-useless-escape
+  1:3257   warning  Unexpected control character(s) in regular expression: \x09, \x0a, \x0b, \x0c, \x0d, \x09, \x0a, \x0b, \x0c, \x0d                                no-control-regex
+  1:3582   warning  Unexpected control character(s) in regular expression: \x09, \x0a, \x0b, \x0c, \x0d, \x09, \x0a, \x0b, \x0c, \x0d, \x09, \x0a, \x0b, \x0c, \x0d  no-control-regex
+  1:3756   warning  Unnecessary escape character: \-                                                                                                                 no-useless-escape
+  1:4055   warning  Unexpected control character(s) in regular expression: \x09, \x0a, \x0b, \x0c, \x0d, \x09, \x0a, \x0b, \x0c, \x0d, \x09, \x0a, \x0b, \x0c, \x0d  no-control-regex
+  1:4222   warning  Unnecessary escape character: \-                                                                                                                 no-useless-escape
+  1:4521   warning  Unexpected control character(s) in regular expression: \x09, \x0a, \x0b, \x0c, \x0d, \x09, \x0a, \x0b, \x0c, \x0d                                no-control-regex
+  1:4539   warning  Unnecessary escape character: \-                                                                                                                 no-useless-escape
+  1:4856   warning  Unexpected control character(s) in regular expression: \x09, \x0a, \x0b, \x0c, \x0d, \x09, \x0a, \x0b, \x0c, \x0d                                no-control-regex
+  1:5154   warning  Unnecessary escape character: \)                                                                                                                 no-useless-escape
+  1:7857   warning  'ActiveXObject' is not defined                                                                                                                   no-undef
+  1:7931   warning  'createPopup' is not defined                                                                                                                     no-undef
+  1:19015  warning  Expected a 'break' statement before 'default'                                                                                                    no-fallthrough
+  1:20113  warning  Expected a 'break' statement before 'default'                                                                                                    no-fallthrough
+  1:20421  warning  Expected a 'break' statement before 'default'                                                                                                    no-fallthrough
+  1:24342  warning  Unnecessary escape character: \.                                                                                                                 no-useless-escape
+  1:35757  warning  't' is defined but never used                                                                                                                    no-unused-vars
+  1:49075  warning  'r' is defined but never used                                                                                                                    no-unused-vars
+  1:50549  warning  'i' is defined but never used                                                                                                                    no-unused-vars
+  1:50598  warning  'r' is defined but never used                                                                                                                    no-unused-vars
+  1:52666  warning  Unnecessary escape character: \}                                                                                                                 no-useless-escape
+  1:53074  warning  Empty block statement                                                                                                                            no-empty
+  1:53754  warning  Unnecessary escape character: \)                                                                                                                 no-useless-escape
+  1:60967  warning  Unnecessary escape character: \-                                                                                                                 no-useless-escape
+  1:72245  warning  Unnecessary escape character: \-                                                                                                                 no-useless-escape
+  1:72515  warning  Unnecessary escape character: \(                                                                                                                 no-useless-escape
+  1:72517  warning  Unnecessary escape character: \)                                                                                                                 no-useless-escape
+  1:75570  warning  Expected a conditional expression and instead saw an assignment                                                                                  no-cond-assign
+  1:77369  warning  Expected a 'break' statement before 'case'                                                                                                       no-fallthrough
+  1:77405  warning  Expected a 'break' statement before 'case'                                                                                                       no-fallthrough
+  1:77447  warning  Expected a 'break' statement before 'case'                                                                                                       no-fallthrough
+  1:77582  warning  Expected a 'break' statement before 'case'                                                                                                       no-fallthrough
+  1:77619  warning  Expected a 'break' statement before 'case'                                                                                                       no-fallthrough
+  1:77661  warning  Expected a 'break' statement before 'case'                                                                                                       no-fallthrough
+  1:79325  warning  Expected a 'break' statement before 'case'                                                                                                       no-fallthrough
+  1:79783  warning  Expected a 'break' statement before 'case'                                                                                                       no-fallthrough
+  1:79973  warning  Expected a 'break' statement before 'default'                                                                                                    no-fallthrough
+  1:80032  warning  Unnecessary escape character: \-                                                                                                                 no-useless-escape
+  1:89485  warning  'r' is defined but never used                                                                                                                    no-unused-vars
+  1:89543  warning  Unnecessary escape character: \.                                                                                                                 no-useless-escape
+  1:89545  warning  Unnecessary escape character: \/                                                                                                                 no-useless-escape
+  1:90733  warning  Unnecessary escape character: \.                                                                                                                 no-useless-escape
+  1:90735  warning  Unnecessary escape character: \^                                                                                                                 no-useless-escape
+  1:90739  warning  Unnecessary escape character: \[                                                                                                                 no-useless-escape
+  1:90741  warning  Unnecessary escape character: \-                                                                                                                 no-useless-escape
+  1:90780  warning  Unnecessary escape character: \.                                                                                                                 no-useless-escape
+  1:90782  warning  Unnecessary escape character: \/                                                                                                                 no-useless-escape
+  1:91000  warning  Do not access Object.prototype method 'hasOwnProperty' from target object                                                                        no-prototype-builtins
+
+/home/runner/work/exp-ga-interpret-coep/exp-ga-interpret-coep/experiment/simulation/js/toastr.min.js
+  6:5072  warning  'define' is not defined   no-undef
+  6:5083  warning  'define' is not defined   no-undef
+  6:5132  warning  'module' is not defined   no-undef
+  6:5147  warning  'module' is not defined   no-undef
+  6:5164  warning  'require' is not defined  no-undef
+
+/home/runner/work/exp-ga-interpret-coep/exp-ga-interpret-coep/experiment/simulation/src/mainPage.js
+    1:6   warning  'timerMasterJson' is assigned a value but never used  no-unused-vars
+    2:6   warning  'conCnt' is assigned a value but never used           no-unused-vars
+   15:10  warning  'GAMimic' is defined but never used                   no-unused-vars
+   16:2   warning  '$' is not defined                                    no-undef
+   17:2   warning  '$' is not defined                                    no-undef
+  148:2   warning  '$' is not defined                                    no-undef
+  150:2   warning  '$' is not defined                                    no-undef
+  151:3   warning  '$' is not defined                                    no-undef
+  154:2   warning  '$' is not defined                                    no-undef
+  154:28  warning  'evt' is defined but never used                       no-unused-vars
+  158:3   warning  'GAMimic1' is not defined                             no-undef
+  167:1   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  168:1   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  168:4   warning  '$' is not defined                                    no-undef
+  169:2   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  170:2   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  170:5   warning  '$' is not defined                                    no-undef
+  171:2   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  171:5   warning  '$' is not defined                                    no-undef
+  172:2   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  173:2   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  173:30  warning  '$' is not defined                                    no-undef
+  174:2   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  177:2   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  178:2   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  178:8   warning  'totaluserLength' is not defined                      no-undef
+  178:31  warning  'isAlphabetical' is not defined                       no-undef
+  178:46  warning  'totaluserLength' is not defined                      no-undef
+  179:3   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  179:6   warning  '$' is not defined                                    no-undef
+  186:6   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  186:8   warning  '$' is not defined                                    no-undef
+  187:7   warning  '$' is not defined                                    no-undef
+  188:7   warning  '$' is not defined                                    no-undef
+  191:7   warning  '$' is not defined                                    no-undef
+  192:8   warning  '$' is not defined                                    no-undef
+  198:5   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  199:7   warning  '$' is not defined                                    no-undef
+  207:6   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  207:8   warning  '$' is not defined                                    no-undef
+  208:7   warning  '$' is not defined                                    no-undef
+  209:7   warning  '$' is not defined                                    no-undef
+  212:7   warning  '$' is not defined                                    no-undef
+  213:8   warning  '$' is not defined                                    no-undef
+  219:5   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  220:6   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  220:8   warning  '$' is not defined                                    no-undef
+  221:8   warning  '$' is not defined                                    no-undef
+  228:19  warning  '$' is not defined                                    no-undef
+  231:6   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  231:8   warning  '$' is not defined                                    no-undef
+  232:6   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  232:8   warning  '$' is not defined                                    no-undef
+  233:6   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  235:8   warning  '$' is not defined                                    no-undef
+  236:8   warning  '$' is not defined                                    no-undef
+  237:8   warning  '$' is not defined                                    no-undef
+  244:5   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  245:5   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  247:6   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  247:8   warning  '$' is not defined                                    no-undef
+  248:6   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  248:10  warning  '$' is not defined                                    no-undef
+  250:7   warning  '$' is not defined                                    no-undef
+  256:1   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  257:1   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  257:8   warning  'id' is already defined                               no-redeclare
+  258:1   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  258:4   warning  '$' is not defined                                    no-undef
+  259:2   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  260:2   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  261:2   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  261:5   warning  '$' is not defined                                    no-undef
+  262:2   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  262:5   warning  '$' is not defined                                    no-undef
+  263:2   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  264:2   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  264:33  warning  '$' is not defined                                    no-undef
+  265:2   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  265:36  warning  '$' is not defined                                    no-undef
+  266:2   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  267:2   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  269:2   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  270:2   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  271:2   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  272:2   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  272:26  warning  'isAlphabetical' is not defined                       no-undef
+  273:3   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  273:6   warning  '$' is not defined                                    no-undef
+  280:6   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  280:8   warning  '$' is not defined                                    no-undef
+  281:6   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  281:8   warning  '$' is not defined                                    no-undef
+  282:5   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  283:4   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  283:13  warning  '$' is not defined                                    no-undef
+  284:7   warning  '$' is not defined                                    no-undef
+  285:2   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  285:15  warning  '$' is not defined                                    no-undef
+  287:2   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  287:15  warning  '$' is not defined                                    no-undef
+  288:2   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  288:15  warning  '$' is not defined                                    no-undef
+  289:2   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  289:16  warning  'toastr' is not defined                               no-undef
+  290:1   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  293:8   warning  '$' is not defined                                    no-undef
+  297:8   warning  '$' is not defined                                    no-undef
+  298:8   warning  '$' is not defined                                    no-undef
+  299:8   warning  '$' is not defined                                    no-undef
+  301:8   warning  '$' is not defined                                    no-undef
+  311:3   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  312:3   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  312:20  warning  '$' is not defined                                    no-undef
+  313:3   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  314:3   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  315:3   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  315:20  warning  '$' is not defined                                    no-undef
+  316:3   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  317:3   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  318:3   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  318:20  warning  '$' is not defined                                    no-undef
+  319:3   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  326:6   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  326:8   warning  '$' is not defined                                    no-undef
+  327:6   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  327:8   warning  '$' is not defined                                    no-undef
+  328:5   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  329:4   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  329:13  warning  '$' is not defined                                    no-undef
+  330:7   warning  '$' is not defined                                    no-undef
+  331:2   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  331:15  warning  '$' is not defined                                    no-undef
+  333:2   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  333:15  warning  '$' is not defined                                    no-undef
+  334:2   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  334:15  warning  '$' is not defined                                    no-undef
+  335:2   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  335:16  warning  'toastr' is not defined                               no-undef
+  336:1   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  339:8   warning  '$' is not defined                                    no-undef
+  343:8   warning  '$' is not defined                                    no-undef
+  344:8   warning  '$' is not defined                                    no-undef
+  345:8   warning  '$' is not defined                                    no-undef
+  347:8   warning  '$' is not defined                                    no-undef
+  358:6   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  358:8   warning  '$' is not defined                                    no-undef
+  359:6   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  360:9   warning  '$' is not defined                                    no-undef
+  363:6   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  364:6   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  365:9   warning  '$' is not defined                                    no-undef
+  368:6   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  374:19  warning  '$' is not defined                                    no-undef
+  376:5   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  377:6   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  377:8   warning  '$' is not defined                                    no-undef
+  378:6   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  378:8   warning  '$' is not defined                                    no-undef
+  379:4   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  379:13  warning  '$' is not defined                                    no-undef
+  380:4   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  380:13  warning  '$' is not defined                                    no-undef
+  381:7   warning  '$' is not defined                                    no-undef
+  382:2   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  382:15  warning  '$' is not defined                                    no-undef
+  384:2   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  384:15  warning  '$' is not defined                                    no-undef
+  385:2   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  385:16  warning  '$' is not defined                                    no-undef
+  386:2   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  386:16  warning  'toastr' is not defined                               no-undef
+  387:2   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  388:1   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  395:8   warning  '$' is not defined                                    no-undef
+  396:8   warning  '$' is not defined                                    no-undef
+  397:8   warning  '$' is not defined                                    no-undef
+  398:8   warning  '$' is not defined                                    no-undef
+  408:6   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  408:8   warning  '$' is not defined                                    no-undef
+  409:6   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  409:10  warning  '$' is not defined                                    no-undef
+  411:7   warning  '$' is not defined                                    no-undef
+  417:1   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  428:2   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  480:2   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  480:5   warning  '$' is not defined                                    no-undef
+  481:3   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  481:6   warning  '$' is not defined                                    no-undef
+  482:1   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  482:28  warning  '$' is not defined                                    no-undef
+  484:1   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  516:1   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  516:12  warning  '$' is not defined                                    no-undef
+  517:1   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  518:1   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  519:1   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  520:1   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  521:1   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  526:1   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  527:1   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  528:1   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  529:1   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  530:1   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  531:1   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  536:1   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  537:1   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  538:1   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  539:1   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  540:1   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  541:1   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  542:1   warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  543:22  warning  '$' is not defined                                    no-undef
+  550:21  warning  'z' is assigned a value but never used                no-unused-vars
+  551:17  warning  '$' is not defined                                    no-undef
+  552:17  warning  '$' is not defined                                    no-undef
+  553:17  warning  '$' is not defined                                    no-undef
+  558:17  warning  '$' is not defined                                    no-undef
+  559:17  warning  '$' is not defined                                    no-undef
+  560:17  warning  '$' is not defined                                    no-undef
+  567:17  warning  '$' is not defined                                    no-undef
+  568:16  warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  568:24  warning  '$' is not defined                                    no-undef
+  570:16  warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  570:26  warning  '$' is not defined                                    no-undef
+  571:27  warning  'toastr' is not defined                               no-undef
+  572:16  warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  573:16  warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  575:16  warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  576:16  warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  576:36  warning  '$' is not defined                                    no-undef
+  577:16  warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  578:16  warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  579:16  warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  580:16  warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  581:16  warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  582:16  warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  584:16  warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  585:16  warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  587:16  warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  588:16  warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  589:16  warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  590:16  warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  592:16  warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  593:16  warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  594:16  warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  595:16  warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  596:16  warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  597:16  warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  598:16  warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  599:16  warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  600:16  warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  601:16  warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  602:16  warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  603:16  warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  604:16  warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  605:16  warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  607:16  warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  608:16  warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  609:16  warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  610:16  warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  611:16  warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  612:16  warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  613:16  warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  623:41  warning  '$' is not defined                                    no-undef
+  624:45  warning  '$' is not defined                                    no-undef
+  625:44  warning  '$' is not defined                                    no-undef
+  634:33  warning  '$' is not defined                                    no-undef
+  644:37  warning  '$' is not defined                                    no-undef
+  656:29  warning  '$' is not defined                                    no-undef
+  674:29  warning  '$' is not defined                                    no-undef
+  675:29  warning  '$' is not defined                                    no-undef
+  676:29  warning  '$' is not defined                                    no-undef
+  680:37  warning  '$' is not defined                                    no-undef
+  699:29  warning  '$' is not defined                                    no-undef
+  704:21  warning  '$' is not defined                                    no-undef
+  705:21  warning  '$' is not defined                                    no-undef
+  706:21  warning  '$' is not defined                                    no-undef
+  710:21  warning  '$' is not defined                                    no-undef
+  711:21  warning  '$' is not defined                                    no-undef
+  712:21  warning  '$' is not defined                                    no-undef
+  717:12  warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  721:18  warning  '$' is not defined                                    no-undef
+  724:36  warning  '$' is not defined                                    no-undef
+  752:16  warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  753:16  warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  754:16  warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  755:16  warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  757:16  warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  758:16  warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  758:33  warning  '$' is not defined                                    no-undef
+  759:16  warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  760:16  warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  761:16  warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  762:16  warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  763:16  warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  764:16  warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  765:16  warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  765:22  warning  '$' is not defined                                    no-undef
+  766:16  warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  767:16  warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  767:26  warning  'midX' is assigned a value but never used             no-unused-vars
+  768:16  warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  768:26  warning  'midY' is assigned a value but never used             no-unused-vars
+  770:16  warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  771:16  warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  771:34  warning  '$' is not defined                                    no-undef
+  772:16  warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  773:16  warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  774:16  warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  775:16  warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  776:16  warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  778:16  warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  779:16  warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  779:22  warning  '$' is not defined                                    no-undef
+  781:16  warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  782:16  warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  782:51  warning  '$' is not defined                                    no-undef
+  783:16  warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  785:16  warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  786:16  warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  802:16  warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  802:22  warning  '$' is not defined                                    no-undef
+  803:16  warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  803:22  warning  '$' is not defined                                    no-undef
+  804:16  warning  Mixed spaces and tabs                                 no-mixed-spaces-and-tabs
+  806:26  warning  '$' is not defined                                    no-undef
+  811:26  warning  'z' is assigned a value but never used                no-unused-vars
+  812:22  warning  '$' is not defined                                    no-undef
+  813:22  warning  '$' is not defined                                    no-undef
+  814:22  warning  '$' is not defined                                    no-undef
+  819:22  warning  '$' is not defined                                    no-undef
+  820:22  warning  '$' is not defined                                    no-undef
+  821:22  warning  '$' is not defined                                    no-undef
+
+/home/runner/work/exp-ga-interpret-coep/exp-ga-interpret-coep/experiment/simulation/src/mainPageAirFilter.js
+    2:10  warning  'GAMimic1' is defined but never used       no-unused-vars
+    3:1   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+    5:1   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+   11:1   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+   12:1   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+   13:1   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+   14:1   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+   14:4   warning  'timerMasterJson' is not defined           no-undef
+   14:32  warning  '$' is not defined                         no-undef
+   15:15  warning  'timerMasterJson' is not defined           no-undef
+   16:3   warning  'seconds' is not defined                   no-undef
+   17:2   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+   17:5   warning  'updateCounter' is not defined             no-undef
+   18:1   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+   19:2   warning  '$' is not defined                         no-undef
+   20:2   warning  '$' is not defined                         no-undef
+  151:2   warning  '$' is not defined                         no-undef
+  153:2   warning  '$' is not defined                         no-undef
+  154:3   warning  '$' is not defined                         no-undef
+  157:2   warning  '$' is not defined                         no-undef
+  158:3   warning  'resultJson' is not defined                no-undef
+  159:3   warning  'resultJson' is not defined                no-undef
+  160:15  warning  'resultJson' is not defined                no-undef
+  161:3   warning  'result' is not defined                    no-undef
+  165:1   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  165:4   warning  '$' is not defined                         no-undef
+  166:2   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  167:2   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  167:5   warning  '$' is not defined                         no-undef
+  168:2   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  168:5   warning  '$' is not defined                         no-undef
+  169:2   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  170:2   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  170:30  warning  '$' is not defined                         no-undef
+  171:2   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  174:2   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  175:2   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  175:8   warning  'totaluserLength' is not defined           no-undef
+  175:31  warning  'isAlphabetical' is not defined            no-undef
+  175:46  warning  'totaluserLength' is not defined           no-undef
+  176:3   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  176:6   warning  '$' is not defined                         no-undef
+  183:6   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  183:8   warning  '$' is not defined                         no-undef
+  184:7   warning  '$' is not defined                         no-undef
+  185:7   warning  '$' is not defined                         no-undef
+  186:7   warning  'mainJson' is not defined                  no-undef
+  187:19  warning  'mainJson' is not defined                  no-undef
+  188:7   warning  '$' is not defined                         no-undef
+  189:8   warning  '$' is not defined                         no-undef
+  195:5   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  196:7   warning  '$' is not defined                         no-undef
+  203:6   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  203:8   warning  '$' is not defined                         no-undef
+  204:7   warning  '$' is not defined                         no-undef
+  205:7   warning  '$' is not defined                         no-undef
+  206:7   warning  'mainJson' is not defined                  no-undef
+  207:19  warning  'mainJson' is not defined                  no-undef
+  208:7   warning  '$' is not defined                         no-undef
+  209:8   warning  '$' is not defined                         no-undef
+  215:5   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  216:6   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  216:8   warning  '$' is not defined                         no-undef
+  217:8   warning  '$' is not defined                         no-undef
+  224:19  warning  '$' is not defined                         no-undef
+  227:6   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  227:8   warning  '$' is not defined                         no-undef
+  228:6   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  228:8   warning  '$' is not defined                         no-undef
+  229:6   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  229:8   warning  'mainJson' is not defined                  no-undef
+  230:8   warning  '$' is not defined                         no-undef
+  231:8   warning  '$' is not defined                         no-undef
+  232:8   warning  '$' is not defined                         no-undef
+  237:5   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  238:5   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  240:6   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  240:8   warning  '$' is not defined                         no-undef
+  241:6   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  241:10  warning  '$' is not defined                         no-undef
+  243:7   warning  '$' is not defined                         no-undef
+  249:1   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  250:1   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  250:8   warning  'id' is already defined                    no-redeclare
+  251:1   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  251:4   warning  '$' is not defined                         no-undef
+  252:2   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  253:2   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  253:5   warning  '$' is not defined                         no-undef
+  254:2   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  254:5   warning  '$' is not defined                         no-undef
+  255:2   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  256:2   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  256:28  warning  '$' is not defined                         no-undef
+  257:2   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  257:36  warning  '$' is not defined                         no-undef
+  258:2   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  259:2   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  261:2   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  262:2   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  263:2   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  264:2   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  264:26  warning  'isAlphabetical' is not defined            no-undef
+  265:3   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  265:6   warning  '$' is not defined                         no-undef
+  272:6   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  272:8   warning  '$' is not defined                         no-undef
+  273:6   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  273:8   warning  '$' is not defined                         no-undef
+  274:5   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  275:4   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  275:13  warning  '$' is not defined                         no-undef
+  276:7   warning  '$' is not defined                         no-undef
+  277:2   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  277:15  warning  '$' is not defined                         no-undef
+  279:2   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  279:15  warning  '$' is not defined                         no-undef
+  280:2   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  280:15  warning  '$' is not defined                         no-undef
+  281:2   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  281:16  warning  'toastr' is not defined                    no-undef
+  282:1   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  285:8   warning  '$' is not defined                         no-undef
+  289:8   warning  '$' is not defined                         no-undef
+  290:8   warning  '$' is not defined                         no-undef
+  291:8   warning  '$' is not defined                         no-undef
+  293:8   warning  '$' is not defined                         no-undef
+  298:3   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  299:3   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  299:20  warning  '$' is not defined                         no-undef
+  300:3   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  301:3   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  302:3   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  302:20  warning  '$' is not defined                         no-undef
+  303:3   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  304:3   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  305:3   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  305:20  warning  '$' is not defined                         no-undef
+  306:3   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  313:6   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  313:8   warning  '$' is not defined                         no-undef
+  314:6   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  314:8   warning  '$' is not defined                         no-undef
+  315:5   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  316:4   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  316:13  warning  '$' is not defined                         no-undef
+  317:7   warning  '$' is not defined                         no-undef
+  318:2   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  318:15  warning  '$' is not defined                         no-undef
+  320:2   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  320:15  warning  '$' is not defined                         no-undef
+  321:2   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  321:15  warning  '$' is not defined                         no-undef
+  322:2   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  322:16  warning  'toastr' is not defined                    no-undef
+  323:1   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  329:8   warning  '$' is not defined                         no-undef
+  330:8   warning  '$' is not defined                         no-undef
+  332:8   warning  '$' is not defined                         no-undef
+  334:8   warning  '$' is not defined                         no-undef
+  338:8   warning  '$' is not defined                         no-undef
+  343:6   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  343:8   warning  '$' is not defined                         no-undef
+  344:6   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  345:9   warning  '$' is not defined                         no-undef
+  347:6   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  348:6   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  349:9   warning  '$' is not defined                         no-undef
+  351:6   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  357:19  warning  '$' is not defined                         no-undef
+  359:5   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  360:6   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  360:8   warning  '$' is not defined                         no-undef
+  361:6   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  361:8   warning  '$' is not defined                         no-undef
+  362:4   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  362:13  warning  '$' is not defined                         no-undef
+  363:4   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  363:13  warning  '$' is not defined                         no-undef
+  364:7   warning  '$' is not defined                         no-undef
+  365:2   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  365:15  warning  '$' is not defined                         no-undef
+  367:2   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  367:15  warning  '$' is not defined                         no-undef
+  368:2   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  369:2   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  369:15  warning  '$' is not defined                         no-undef
+  370:2   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  370:16  warning  'toastr' is not defined                    no-undef
+  371:1   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  378:8   warning  '$' is not defined                         no-undef
+  379:8   warning  '$' is not defined                         no-undef
+  381:8   warning  '$' is not defined                         no-undef
+  382:8   warning  '$' is not defined                         no-undef
+  383:8   warning  '$' is not defined                         no-undef
+  387:8   warning  '$' is not defined                         no-undef
+  393:6   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  393:8   warning  '$' is not defined                         no-undef
+  394:6   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  394:10  warning  '$' is not defined                         no-undef
+  396:7   warning  '$' is not defined                         no-undef
+  402:1   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  413:2   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  465:2   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  465:5   warning  '$' is not defined                         no-undef
+  466:3   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  466:6   warning  '$' is not defined                         no-undef
+  467:1   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  467:28  warning  '$' is not defined                         no-undef
+  469:1   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  503:1   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  503:12  warning  '$' is not defined                         no-undef
+  504:1   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  505:1   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  506:1   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  507:1   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  507:12  warning  'mainJson' is not defined                  no-undef
+  508:1   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  509:1   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  513:1   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  514:1   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  515:1   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  516:1   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  517:1   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  517:13  warning  'mainJson' is not defined                  no-undef
+  518:1   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  522:1   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  523:1   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  524:1   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  525:1   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  526:1   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  527:1   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  528:1   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  529:22  warning  '$' is not defined                         no-undef
+  536:21  warning  'z' is assigned a value but never used     no-unused-vars
+  537:17  warning  '$' is not defined                         no-undef
+  538:17  warning  '$' is not defined                         no-undef
+  539:17  warning  '$' is not defined                         no-undef
+  544:17  warning  '$' is not defined                         no-undef
+  545:17  warning  '$' is not defined                         no-undef
+  546:17  warning  '$' is not defined                         no-undef
+  550:12  warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  551:12  warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  553:12  warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  553:14  warning  '$' is not defined                         no-undef
+  554:12  warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  555:12  warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  555:32  warning  '$' is not defined                         no-undef
+  557:12  warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  558:12  warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  559:12  warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  560:12  warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  561:12  warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  562:12  warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  564:12  warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  565:12  warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  566:12  warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  566:22  warning  'toastr' is not defined                    no-undef
+  567:12  warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  568:12  warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  570:12  warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  571:12  warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  572:12  warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  574:12  warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  575:12  warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  576:12  warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  577:12  warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  578:12  warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  578:26  warning  'toastr' is not defined                    no-undef
+  579:12  warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  580:12  warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  581:12  warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  582:12  warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  584:12  warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  585:12  warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  587:12  warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  588:12  warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  589:12  warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  590:12  warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  592:12  warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  593:12  warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  594:12  warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  595:12  warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  596:12  warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  597:12  warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  598:12  warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  599:12  warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  601:12  warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  602:12  warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  603:12  warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  604:12  warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  606:12  warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  607:12  warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  608:12  warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  620:41  warning  '$' is not defined                         no-undef
+  621:45  warning  '$' is not defined                         no-undef
+  622:44  warning  '$' is not defined                         no-undef
+  632:33  warning  '$' is not defined                         no-undef
+  646:37  warning  '$' is not defined                         no-undef
+  656:29  warning  '$' is not defined                         no-undef
+  673:29  warning  '$' is not defined                         no-undef
+  674:29  warning  '$' is not defined                         no-undef
+  678:25  warning  'midX' is assigned a value but never used  no-unused-vars
+  679:25  warning  'midY' is assigned a value but never used  no-unused-vars
+  681:33  warning  '$' is not defined                         no-undef
+  696:21  warning  '$' is not defined                         no-undef
+  697:21  warning  'toastr' is not defined                    no-undef
+  700:25  warning  '$' is not defined                         no-undef
+  705:25  warning  'z' is assigned a value but never used     no-unused-vars
+  706:21  warning  '$' is not defined                         no-undef
+  707:21  warning  '$' is not defined                         no-undef
+  708:21  warning  '$' is not defined                         no-undef
+  713:21  warning  '$' is not defined                         no-undef
+  714:21  warning  '$' is not defined                         no-undef
+  715:21  warning  '$' is not defined                         no-undef
+  720:12  warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  724:18  warning  '$' is not defined                         no-undef
+  727:36  warning  '$' is not defined                         no-undef
+  745:20  warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  746:20  warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  747:20  warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  754:33  warning  'toastr' is not defined                    no-undef
+  760:24  warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  768:16  warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  769:16  warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  770:16  warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  771:16  warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  773:16  warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  774:16  warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  774:33  warning  '$' is not defined                         no-undef
+  775:16  warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  776:16  warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  777:16  warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  778:16  warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  779:16  warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  780:16  warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  781:16  warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  781:22  warning  '$' is not defined                         no-undef
+  782:25  warning  'toastr' is not defined                    no-undef
+  783:16  warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  784:16  warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  784:26  warning  'midX' is assigned a value but never used  no-unused-vars
+  785:16  warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  785:26  warning  'midY' is assigned a value but never used  no-unused-vars
+  787:16  warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  788:16  warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  788:34  warning  '$' is not defined                         no-undef
+  789:16  warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  790:16  warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  791:16  warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  792:16  warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  793:16  warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  795:16  warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  796:16  warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  796:22  warning  '$' is not defined                         no-undef
+  798:16  warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  799:16  warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  799:51  warning  '$' is not defined                         no-undef
+  800:16  warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  802:16  warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  803:16  warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  819:16  warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  819:22  warning  '$' is not defined                         no-undef
+  820:16  warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  820:22  warning  '$' is not defined                         no-undef
+  821:16  warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  821:22  warning  '$' is not defined                         no-undef
+  823:26  warning  '$' is not defined                         no-undef
+  828:26  warning  'z' is assigned a value but never used     no-unused-vars
+  829:22  warning  '$' is not defined                         no-undef
+  830:22  warning  '$' is not defined                         no-undef
+  831:22  warning  '$' is not defined                         no-undef
+  836:22  warning  '$' is not defined                         no-undef
+  837:22  warning  '$' is not defined                         no-undef
+  838:22  warning  '$' is not defined                         no-undef
+
+/home/runner/work/exp-ga-interpret-coep/exp-ga-interpret-coep/experiment/simulation/src/popupData.js
+    1:3   warning  '$' is not defined     no-undef
+    3:3   warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+    3:5   warning  '$' is not defined     no-undef
+    4:3   warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+    4:5   warning  '$' is not defined     no-undef
+    5:3   warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+    5:5   warning  '$' is not defined     no-undef
+    6:3   warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+    6:5   warning  '$' is not defined     no-undef
+    7:4   warning  'htm' is not defined   no-undef
+   19:4   warning  '$' is not defined     no-undef
+   19:26  warning  'htm' is not defined   no-undef
+   22:4   warning  '$' is not defined     no-undef
+   23:4   warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+   23:6   warning  '$' is not defined     no-undef
+   24:4   warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+   24:6   warning  '$' is not defined     no-undef
+   25:4   warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+   25:6   warning  '$' is not defined     no-undef
+   26:4   warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+   26:6   warning  '$' is not defined     no-undef
+   28:5   warning  'htm' is not defined   no-undef
+   99:5   warning  '$' is not defined     no-undef
+   99:27  warning  'htm' is not defined   no-undef
+  101:4   warning  '$' is not defined     no-undef
+  102:4   warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  102:6   warning  '$' is not defined     no-undef
+  103:4   warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  103:6   warning  '$' is not defined     no-undef
+  104:4   warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  104:6   warning  '$' is not defined     no-undef
+  105:4   warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  105:6   warning  '$' is not defined     no-undef
+  107:5   warning  'htm' is not defined   no-undef
+  189:5   warning  '$' is not defined     no-undef
+  189:27  warning  'htm' is not defined   no-undef
+
+/home/runner/work/exp-ga-interpret-coep/exp-ga-interpret-coep/experiment/simulation/src/result.js
+    1:10  warning  'result' is defined but never used  no-unused-vars
+    4:1   warning  Mixed spaces and tabs               no-mixed-spaces-and-tabs
+    4:4   warning  'timerMasterJson' is not defined    no-undef
+    4:30  warning  '$' is not defined                  no-undef
+    6:3   warning  'seconds' is not defined            no-undef
+    7:2   warning  Mixed spaces and tabs               no-mixed-spaces-and-tabs
+    7:5   warning  'updateCounter' is not defined      no-undef
+    8:2   warning  '$' is not defined                  no-undef
+    9:2   warning  '$' is not defined                  no-undef
+   12:2   warning  '$' is not defined                  no-undef
+   38:43  warning  'timerMasterJson' is not defined    no-undef
+   43:43  warning  'mainJson' is not defined           no-undef
+   51:43  warning  'resultJson' is not defined         no-undef
+   55:42  warning  'mainJson' is not defined           no-undef
+   63:43  warning  'resultJson' is not defined         no-undef
+   87:42  warning  'timerMasterJson' is not defined    no-undef
+   91:43  warning  'mainJson' is not defined           no-undef
+   99:43  warning  'resultJson' is not defined         no-undef
+  104:42  warning  'mainJson' is not defined           no-undef
+  112:43  warning  'resultJson' is not defined         no-undef
+  124:2   warning  '$' is not defined                  no-undef
+  126:1   warning  '$' is not defined                  no-undef
+  127:3   warning  'tmp' is not defined                no-undef
+  127:9   warning  '$' is not defined                  no-undef
+  128:6   warning  'tmp' is not defined                no-undef
+  130:3   warning  Mixed spaces and tabs               no-mixed-spaces-and-tabs
+  131:3   warning  Mixed spaces and tabs               no-mixed-spaces-and-tabs
+  132:3   warning  Mixed spaces and tabs               no-mixed-spaces-and-tabs
+  133:3   warning  Mixed spaces and tabs               no-mixed-spaces-and-tabs
+  133:8   warning  '$' is not defined                  no-undef
+  134:3   warning  Mixed spaces and tabs               no-mixed-spaces-and-tabs
+  136:3   warning  Mixed spaces and tabs               no-mixed-spaces-and-tabs
+  137:3   warning  Mixed spaces and tabs               no-mixed-spaces-and-tabs
+  137:6   warning  '$' is not defined                  no-undef
+  138:3   warning  Mixed spaces and tabs               no-mixed-spaces-and-tabs
+  138:41  warning  '$' is not defined                  no-undef
+  139:3   warning  Mixed spaces and tabs               no-mixed-spaces-and-tabs
+  147:4   warning  'html2canvas' is not defined        no-undef
+  162:4   warning  '$' is not defined                  no-undef
+
+/home/runner/work/exp-ga-interpret-coep/exp-ga-interpret-coep/experiment/simulation/src/stdJson.js
+   1:5  warning  'plantDocuments' is assigned a value but never used  no-unused-vars
+  22:1  warning  Mixed spaces and tabs                                no-mixed-spaces-and-tabs
+  23:1  warning  Mixed spaces and tabs                                no-mixed-spaces-and-tabs
+  24:1  warning  Mixed spaces and tabs                                no-mixed-spaces-and-tabs
+  25:1  warning  Mixed spaces and tabs                                no-mixed-spaces-and-tabs
+  26:1  warning  Mixed spaces and tabs                                no-mixed-spaces-and-tabs
+  27:1  warning  Mixed spaces and tabs                                no-mixed-spaces-and-tabs
+  28:1  warning  Mixed spaces and tabs                                no-mixed-spaces-and-tabs
+  29:1  warning  Mixed spaces and tabs                                no-mixed-spaces-and-tabs
+  30:1  warning  Mixed spaces and tabs                                no-mixed-spaces-and-tabs
+  31:1  warning  Mixed spaces and tabs                                no-mixed-spaces-and-tabs
+  32:1  warning  Mixed spaces and tabs                                no-mixed-spaces-and-tabs
+  33:1  warning  Mixed spaces and tabs                                no-mixed-spaces-and-tabs
+  38:4  warning  Mixed spaces and tabs                                no-mixed-spaces-and-tabs
+  39:4  warning  Mixed spaces and tabs                                no-mixed-spaces-and-tabs
+  40:4  warning  Mixed spaces and tabs                                no-mixed-spaces-and-tabs
+  41:4  warning  Mixed spaces and tabs                                no-mixed-spaces-and-tabs
+  42:4  warning  Mixed spaces and tabs                                no-mixed-spaces-and-tabs
+  43:4  warning  Mixed spaces and tabs                                no-mixed-spaces-and-tabs
+  44:4  warning  Mixed spaces and tabs                                no-mixed-spaces-and-tabs
+  45:4  warning  Mixed spaces and tabs                                no-mixed-spaces-and-tabs
+  46:4  warning  Mixed spaces and tabs                                no-mixed-spaces-and-tabs
+  47:4  warning  Mixed spaces and tabs                                no-mixed-spaces-and-tabs
+  48:4  warning  Mixed spaces and tabs                                no-mixed-spaces-and-tabs
+  49:4  warning  Mixed spaces and tabs                                no-mixed-spaces-and-tabs
+  50:4  warning  Mixed spaces and tabs                                no-mixed-spaces-and-tabs
+  51:4  warning  Mixed spaces and tabs                                no-mixed-spaces-and-tabs
+  52:4  warning  Mixed spaces and tabs                                no-mixed-spaces-and-tabs
+  53:4  warning  Mixed spaces and tabs                                no-mixed-spaces-and-tabs
+  54:4  warning  Mixed spaces and tabs                                no-mixed-spaces-and-tabs
+  55:4  warning  Mixed spaces and tabs                                no-mixed-spaces-and-tabs
+  56:4  warning  Mixed spaces and tabs                                no-mixed-spaces-and-tabs
+  57:4  warning  Mixed spaces and tabs                                no-mixed-spaces-and-tabs
+  61:4  warning  Mixed spaces and tabs                                no-mixed-spaces-and-tabs
+  62:4  warning  Mixed spaces and tabs                                no-mixed-spaces-and-tabs
+  63:4  warning  Mixed spaces and tabs                                no-mixed-spaces-and-tabs
+  64:4  warning  Mixed spaces and tabs                                no-mixed-spaces-and-tabs
+  65:4  warning  Mixed spaces and tabs                                no-mixed-spaces-and-tabs
+  66:4  warning  Mixed spaces and tabs                                no-mixed-spaces-and-tabs
+  67:4  warning  Mixed spaces and tabs                                no-mixed-spaces-and-tabs
+  68:4  warning  Mixed spaces and tabs                                no-mixed-spaces-and-tabs
+  69:4  warning  Mixed spaces and tabs                                no-mixed-spaces-and-tabs
+  70:4  warning  Mixed spaces and tabs                                no-mixed-spaces-and-tabs
+  71:4  warning  Mixed spaces and tabs                                no-mixed-spaces-and-tabs
+  72:4  warning  Mixed spaces and tabs                                no-mixed-spaces-and-tabs
+  73:4  warning  Mixed spaces and tabs                                no-mixed-spaces-and-tabs
+  74:4  warning  Mixed spaces and tabs                                no-mixed-spaces-and-tabs
+  75:4  warning  Mixed spaces and tabs                                no-mixed-spaces-and-tabs
+  76:4  warning  Mixed spaces and tabs                                no-mixed-spaces-and-tabs
+  77:4  warning  Mixed spaces and tabs                                no-mixed-spaces-and-tabs
+  78:4  warning  Mixed spaces and tabs                                no-mixed-spaces-and-tabs
+  79:4  warning  Mixed spaces and tabs                                no-mixed-spaces-and-tabs
+  80:4  warning  Mixed spaces and tabs                                no-mixed-spaces-and-tabs
+
+/home/runner/work/exp-ga-interpret-coep/exp-ga-interpret-coep/experiment/simulation/src/timer.js
+   6:1  warning  '$' is not defined  no-undef
+  21:4  warning  '$' is not defined  no-undef
+
+✖ 1092 problems (1 error, 1091 warnings)
+

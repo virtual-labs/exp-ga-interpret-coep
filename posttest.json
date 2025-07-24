@@ -1,0 +1,115 @@
+{
+    "version": 2,
+    "questions": [
+        {
+            "question": "What is the purpose of including a north arrow in a GA drawing? ",
+            "answers": {
+                "a": "To indicate the direction of process flow ",
+                "b": "To show the location of the plant entrance ",
+                "c": "To provide a reference point for orientation ",
+                "d": "To indicate the direction of sunlight"
+            },
+            "correctAnswer": "c",
+            "difficulty": "beginner"
+        },
+        {
+            "question": "Which of the following is a common symbol used in a GA drawing to represent a pipe? ",
+            "answers": {
+                "a": "Circle ",
+                "b": "Square ",
+                "c": "Triangle ",
+                "d": "Line with an arrowhead"
+            },
+            "correctAnswer": "d",
+            "difficulty": "beginner"
+        },
+        {
+            "question": "What is the benefit of using a GA drawing to identify potential safety hazards?",
+            "answers": {
+                "a": "It reduces the risk of accidents ",
+                "b": "It improves plant efficiency ",
+                "c": "It enhances communication among stakeholders",
+                "d": "It facilitates plant modifications"
+            },
+            "correctAnswer": "a",
+            "difficulty": "beginner"
+        },
+        {
+            "question": "How does a GA drawing support the development of a plant's emergency response plan? ",
+            "answers": {
+                "a": "By identifying evacuation routes ",
+                "b": "By providing a layout of the plant's fire suppression system ",
+                "c": "By showing the location of emergency response equipment ",
+                "d": "By facilitating communication among emergency responders"
+            },
+            "correctAnswer": "a",
+            "difficulty": "beginner"
+        },
+        {
+            "question": "Which of the following is a key consideration when creating a GA drawing for a plant with multiple levels? ",
+            "answers": {
+                "a": "Ensuring that all levels are shown on a single drawing ",
+                "b": "Using a different scale for each level ",
+                "c": "Providing a clear indication of level changes ",
+                "d": "Omitting stairs and ladders for simplicity"
+            },
+            "correctAnswer": "c",
+            "difficulty": "beginner"
+        },
+        {
+            "question": "What is the purpose of including a legend or key in a GA drawing? ",
+            "answers": {
+                "a": "To provide a list of abbreviations and symbols ",
+                "b": "To show the location of plant equipment ",
+                "c": "To indicate the direction of process flow ",
+                "d": "To provide a scale for the drawing"
+            },
+            "correctAnswer": "a",
+            "difficulty": "beginner"
+        },
+        {
+            "question": "How does a GA drawing support the planning of plant maintenance activities? ",
+            "answers": {
+                "a": "By identifying areas that require frequent maintenance ",
+                "b": "By providing a schedule for maintenance activities ",
+                "c": "By showing the location of maintenance equipment ",
+                "d": "By facilitating communication among maintenance personnel"
+            },
+            "correctAnswer": "a",
+            "difficulty": "beginner"
+        },
+        {
+            "question": "Which of the following is a common application of a GA drawing in plant design? ",
+            "answers": {
+                "a": "Designing the plant's electrical system ",
+                "b": "Developing the plant's piping layout ",
+                "c": "Creating a layout for the plant's control room ",
+                "d": "Planning the plant's HVAC system"
+            },
+            "correctAnswer": "b",
+            "difficulty": "beginner"
+        },
+        {
+            "question": "What is the benefit of using a GA drawing to identify areas for plant expansion? ",
+            "answers": {
+                "a": "It reduces the cost of expansion ",
+                "b": "It improves plant efficiency ",
+                "c": "It enhances communication among stakeholders ",
+                "d": "It facilitates the identification of potential expansion areas"
+            },
+            "correctAnswer": "d",
+            "difficulty": "beginner"
+        },
+        {
+            "question": "How does a GA drawing support the development of a plant's training program? ",
+            "answers": {
+                "a": "By providing a visual aid for training purposes ",
+                "b": "By identifying areas that require special training ",
+                "c": "By showing the location of training equipment ",
+                "d": "By facilitating communication among trainers and trainees"
+            },
+            "correctAnswer": "a",
+            "difficulty": "beginner"
+        }
+    ]
+}
